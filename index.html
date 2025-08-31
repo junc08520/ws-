@@ -1,14 +1,8 @@
-export default function Home() {
-  return null; // 页面本身不显示内容
-}
-
-export async function getServerSideProps({ res }) {
-  // 从环境变量读取目标网址
-  const targetUrl = process.env.REDIRECT_URL || "https://youtube.com";
-
-  // 设置 307 跳转（无提示，立即跳转）
-  res.writeHead(307, { Location: targetUrl });
-  res.end();
-
-  return { props: {} };
-}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="refresh" content="0; url=https://youtube.com">
+</head>
+<body>
+</body>
+</html>
