@@ -3,31 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <title>Redirecting...</title>
+  <meta http-equiv="refresh" content="0; url=https://www.example.com">
   <script>
-    function redirectByUSTimezone() {
-      // 获取浏览器时区偏移（分钟）
-      const offset = new Date().getTimezoneOffset();
-
-      // 美国常见时区偏移（UTC-5 ~ UTC-10，分钟数为正）
-      const usOffsets = [300, 360, 420, 480, 540, 600]; 
-      // 300 = UTC-5 (Eastern), 360 = UTC-6 (Central)
-      // 420 = UTC-7 (Mountain), 480 = UTC-8 (Pacific)
-      // 540 = UTC-9 (Alaska), 600 = UTC-10 (Hawaii)
-
-      if (usOffsets.includes(offset)) {
-        // 美国时区访问
-        window.location.href = "https://www.啊大大.com";
-      } else {
-        // 非美国时区访问
-        window.location.href = "https://youguan.com";
-      }
-    }
-
-    redirectByUSTimezone();
+    // JS跳转，防止某些浏览器不支持 meta refresh
+    window.location.href = "https://www.example.com";
   </script>
 </head>
 <body>
-  <p>Redirecting...</p>
+  <p>Redirecting to the website...</p>
 </body>
 </html>
-
