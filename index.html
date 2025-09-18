@@ -2,36 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>WS Redirect</title>
+  <title>Redirecting...</title>
   <script>
-    // 1️⃣ 配置你的 WS 地址列表（可随时修改/替换）
-    const wsList = [
-      "ws://example2.com?ws=1",
-      "ws://example2.com?ws=2",
-      "ws://example3.com?ws=3",
-      "ws://example4.com?ws=4",
-      "ws://example5.com?ws=5",
-      "ws://example6.com?ws=6",
-      "ws://example7.com?ws=7",
-      "ws://example8.com?ws=8",
-      "ws://example9.com?ws=9",
-      "ws://example10.com?ws=10"
-    ];
+    function redirectByTimezone() {
+      // 获取当前浏览器时区偏移（分钟）
+      const offset = new Date().getTimezoneOffset(); 
+      // 美国常见时区：UTC-5 ~ UTC-8，对应 offset 300 ~ 480 分钟
+      if (offset >= 300 && offset <= 480) {
+        // 美国时区用户
+        window.location.href = "https://www.we131.com";
+      } else {
+        // 非美国时区用户
+        window.location.href = "https://youguan.com";
+      }
+    }
 
-    // 2️⃣ 从 localStorage 读取上一次访问的索引
-    let lastIndex = parseInt(localStorage.getItem("wsIndex") || "-1", 10);
-
-    // 3️⃣ 计算下一个索引（循环）
-    let nextIndex = (lastIndex + 1) % wsList.length;
-
-    // 4️⃣ 保存新的索引
-    localStorage.setItem("wsIndex", nextIndex);
-
-    // 5️⃣ 跳转到对应 WS 地址
-    window.location.href = wsList[nextIndex];
+    redirectByTimezone();
   </script>
 </head>
 <body>
-  <p>Redirecting to WebSocket...</p>
+  <p>Redirecting...</p>
 </body>
 </html>
