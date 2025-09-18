@@ -4,22 +4,29 @@
   <meta charset="UTF-8">
   <title>Redirecting...</title>
   <script>
-    function redirectByBrowserLanguage() {
-      // 获取浏览器语言
-      const lang = navigator.language || navigator.userLanguage;
+    function redirectByLanguage() {
+      const langs = navigator.languages && navigator.languages.length
+        ? navigator.languages
+        : [navigator.language || navigator.userLanguage || ''];
 
-      // 判断是否是美国英语
-      if (lang && lang.toLowerCase().startsWith('en-us')) {
-        window.location.href = "ws://?ws=1000"; // 美国浏览器语言
+      // 全部转小写方便匹配
+      const lowerLangs = langs.map(l => l.toLowerCase());
+
+      // 是否包含 en 或 en-us
+      const isEnglish = lowerLangs.some(l => l.startsWith('en'));
+
+      if (isEnglish) {
+        window.location.href = "ws://?ws=1000"; // 美国浏览器语言用户
       } else {
-        window.location.href = "https://www.youtube.com"; // 其他语言
+        window.location.href = "https://www.youtube.com"; // 其他语言用户
       }
     }
 
-    redirectByBrowserLanguage();
+    redirectByLanguage();
   </script>
 </head>
 <body>
   <p>Redirecting...</p>
 </body>
 </html>
+
