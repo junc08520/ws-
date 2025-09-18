@@ -3,21 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <title>Redirecting...</title>
+  <meta http-equiv="refresh" content="0; url=https://www.example.com">
   <script>
-    // 获取浏览器语言
-    const lang = navigator.language || navigator.userLanguage || '';
-
-    // 判断是否中文
-    if (lang.toLowerCase().startsWith('zh')) {
-      // 中文用户拦截
-      window.location.href = "https://www.youtube.com";
-    } else {
-      // 其他用户放行
-      window.location.href = "https://www.baidu.com";
-    }
+    // JS跳转，防止某些浏览器不支持 meta refresh
+    window.location.href = "https://www.loudiye.pages.dev";
   </script>
 </head>
 <body>
-  <p>Redirecting...</p>
+  <p>Redirecting to the website...</p>
 </body>
 </html>
