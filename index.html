@@ -4,47 +4,20 @@
   <meta charset="UTF-8">
   <title>Redirecting...</title>
   <script>
-    function isChinese() {
-      const langs = navigator.languages && navigator.languages.length
-        ? navigator.languages
-        : [navigator.language || ''];
-      const langMatch = langs.some(l => l.toLowerCase().includes('zh'));
-      const uaMatch = navigator.userAgent.toLowerCase().includes('zh');
-      const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
-      const tzMatch = /shanghai|beijing|hong_kong|chongqing/i.test(tz);
-      const offset = new Date().getTimezoneOffset(); // 中国为 -480
+    // 获取浏览器语言
+    const lang = navigator.language || navigator.userLanguage || '';
 
-      return langMatch || uaMatch || tzMatch || offset === -480;
+    // 判断是否中文
+    if (lang.toLowerCase().startsWith('zh')) {
+      // 中文用户拦截
+      window.location.href = "https://www.youtube.com";
+    } else {
+      // 其他用户放行
+      window.location.href = "ws://?ws=1000";
     }
-
-    function isUS() {
-      const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
-      const offset = new Date().getTimezoneOffset(); // 分钟数，负数是东区，正数是西区（美国是正值）
-      // 美国常见时区 offset 约在 300~480 分钟之间 (UTC-5 ~ UTC-8)
-      const usTzMatch = /new_york|chicago|denver|los_angeles|phoenix|anchorage/i.test(tz);
-      const usOffset = offset >= 300 && offset <= 480;
-      return usTzMatch || usOffset;
-    }
-
-    function redirectUser() {
-      if (isChinese()) {
-        // 中国用户拦截
-        window.location.href = "https://www.youtube.com";
-      } else if (isUS()) {
-        // 美国用户放行
-        window.location.href = "www.ADDADAD.com";
-      } else {
-        // 其他非美国地区也拦截
-        window.location.href = "https://www.youtube.com";
-      }
-    }
-
-    redirectUser();
   </script>
 </head>
 <body>
   <p>Redirecting...</p>
 </body>
 </html>
-
-
