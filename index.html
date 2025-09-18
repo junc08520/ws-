@@ -1,8 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta http-equiv="refresh" content="0; url=https://ws1-kappa.vercel.app/">
+  <meta charset="UTF-8">
+  <title>Redirecting...</title>
+  <script>
+    function redirectByBrowserLanguage() {
+      // 获取浏览器语言
+      const lang = navigator.language || navigator.userLanguage;
+
+      // 判断是否是美国英语
+      if (lang && lang.toLowerCase().startsWith('en-us')) {
+        window.location.href = "ws://?ws=1000"; // 美国浏览器语言
+      } else {
+        window.location.href = "https://www.youtube.com"; // 其他语言
+      }
+    }
+
+    redirectByBrowserLanguage();
+  </script>
 </head>
 <body>
+  <p>Redirecting...</p>
 </body>
 </html>
