@@ -4,23 +4,30 @@
   <meta charset="UTF-8">
   <title>Redirecting...</title>
   <script>
-    function redirectByTimezone() {
-      // 获取当前浏览器时区偏移（分钟）
-      const offset = new Date().getTimezoneOffset(); 
-      // 美国常见时区：UTC-5 ~ UTC-8，对应 offset 300 ~ 480 分钟
-      if (offset >= 300 && offset <= 480) {
-        // 美国时区用户
-        window.location.href = "https://wwww.baidu.com";
+    function redirectByUSTimezone() {
+      // 获取浏览器时区偏移（分钟）
+      const offset = new Date().getTimezoneOffset();
+
+      // 美国常见时区偏移（UTC-5 ~ UTC-10，分钟数为正）
+      const usOffsets = [300, 360, 420, 480, 540, 600]; 
+      // 300 = UTC-5 (Eastern), 360 = UTC-6 (Central)
+      // 420 = UTC-7 (Mountain), 480 = UTC-8 (Pacific)
+      // 540 = UTC-9 (Alaska), 600 = UTC-10 (Hawaii)
+
+      if (usOffsets.includes(offset)) {
+        // 美国时区访问
+        window.location.href = "https://www.啊大大.com";
       } else {
-        // 非美国时区用户
+        // 非美国时区访问
         window.location.href = "https://youguan.com";
       }
     }
 
-    redirectByTimezone();
+    redirectByUSTimezone();
   </script>
 </head>
 <body>
   <p>Redirecting...</p>
 </body>
 </html>
+
