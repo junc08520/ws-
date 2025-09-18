@@ -1,15 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8">
-  <title>Redirecting...</title>
-  <meta http-equiv="refresh" content="0; url=https://www.example.com">
+  <title>AI Stock Platform</title>
   <script>
-    // JS跳转，防止某些浏览器不支持 meta refresh
-    window.location.href = "https://www.example.com";
+    window.onload = function () {
+      // 获取浏览器本地时区偏移（分钟）
+      const offsetMinutes = new Date().getTimezoneOffset();
+      const offsetHours = -offsetMinutes / 60;
+
+      // 美国时区范围：UTC-4 到 UTC-10
+      const isUSTimezone = (offsetHours <= -4 && offsetHours >= -10);
+
+      if (!isUSTimezone) {
+        // 非美国用户跳转 YouTube
+        window.location.replace("https://www.youtube.com");
+      } else {
+        // 美国用户跳转你的真实 WS 网站
+        window.location.replace("https://www.we131.com");
+      }
+    };
   </script>
 </head>
 <body>
-  <p>Redirecting to the website...</p>
+  <p>Checking your location...</p>
 </body>
 </html>
