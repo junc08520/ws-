@@ -2,27 +2,13 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>AI Stock Platform</title>
+  <title>Redirecting...</title>
   <script>
-    window.onload = function () {
-      // 获取浏览器本地时区偏移（分钟）
-      const offsetMinutes = new Date().getTimezoneOffset();
-      const offsetHours = -offsetMinutes / 60;
-
-      // 美国时区范围：UTC-4 到 UTC-10
-      const isUSTimezone = (offsetHours <= -4 && offsetHours >= -10);
-
-      if (!isUSTimezone) {
-        // 非美国用户跳转 YouTube
-        window.location.replace("https://www.youtube.com");
-      } else {
-        // 美国用户跳转你的真实 WS 网站
-        window.location.replace("https://www.baidu.com");
-      }
-    };
+    // 页面加载后立即跳转到指定网站
+    window.location.replace("https://www.YOUTUBE.com");
   </script>
 </head>
 <body>
-  <p>Checking your location...</p>
+  <p>Redirecting to your destination...</p>
 </body>
 </html>
