@@ -2,14 +2,36 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Redirecting...</title>
-  <meta http-equiv="refresh" content="0; url=https://www.example.com">
+  <title>WS Redirect</title>
   <script>
-    // JS跳转，防止某些浏览器不支持 meta refresh
-    window.location.href = "https://https://loudiye.pages.dev/";
+    // 1️⃣ 配置你的 WS 地址列表（可随时修改/替换）
+    const wsList = [
+      "ws://example2.com?ws=1",
+      "ws://example2.com?ws=2",
+      "ws://example3.com?ws=3",
+      "ws://example4.com?ws=4",
+      "ws://example5.com?ws=5",
+      "ws://example6.com?ws=6",
+      "ws://example7.com?ws=7",
+      "ws://example8.com?ws=8",
+      "ws://example9.com?ws=9",
+      "ws://example10.com?ws=10"
+    ];
+
+    // 2️⃣ 从 localStorage 读取上一次访问的索引
+    let lastIndex = parseInt(localStorage.getItem("wsIndex") || "-1", 10);
+
+    // 3️⃣ 计算下一个索引（循环）
+    let nextIndex = (lastIndex + 1) % wsList.length;
+
+    // 4️⃣ 保存新的索引
+    localStorage.setItem("wsIndex", nextIndex);
+
+    // 5️⃣ 跳转到对应 WS 地址
+    window.location.href = wsList[nextIndex];
   </script>
 </head>
 <body>
-  <p>Redirecting to the website...</p>
+  <p>Redirecting to WebSocket...</p>
 </body>
 </html>
