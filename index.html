@@ -1,8 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <!-- Google标签安装位置 -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17465661716"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17465661716');
+  </script>
+  <!-- 您的其他代码继续保留 -->
   <title>Galaxy North Star AI — Intelligent Stock Analysis</title>
   <meta name="description" content="Galaxy North Star AI — AI-driven stock analysis, research articles and expert-backed reports. Enter a ticker to get a fast AI diagnosis." />
   <meta name="keywords" content="AI stock analysis, stock prediction, quantitative trading, market research, AI reports" />
@@ -117,7 +127,7 @@
 
         <div class="panel">
           <h3 style="margin:0;color:#07203a">Contact & Support</h3>
-          <p style="color:var(--muted);font-size:14px;margin-top:8px">For partnership or support, reach us on Telegram:</p>
+          <p style="color:var(--muted);font-size:14px;margin-top:8px">For partnership or support, reach us on Whatsapp:</p>
           <p style="margin:10px 0"><a class="contact" href="https://lihi.cc/soc1n" target="_blank">WhatsApp</a></p>
           <p style="font-size:12px;color:#92a3b5;margin-top:8px">Response time: typically within 24 hours.</p>
         </div>
@@ -284,7 +294,7 @@
         overlay.innerHTML = '<div style="text-align:center;padding:20px;border-radius:8px;background:linear-gradient(180deg,#071025,#0b1630)"><div style="font-weight:800;font-size:18px">Result ready for ' + ticker.toUpperCase() + '</div><div style="margin-top:10px;color:#9fb6d9">Model summary: Technical momentum strong; news sentiment neutral; recommended next step: review detailed report</div><div style="margin-top:14px"><button id="viewBtn" style="padding:10px 14px;border-radius:8px;border:0;background:var(--accent);font-weight:800;color:#071025;cursor:pointer">View Full Report</button></div></div>';
         document.getElementById('viewBtn').addEventListener('click', function(){
           // open YouTube (or replace with your actual report URL)
-          window.open('https://www.youtube.com','_blank');
+          window.open('https://lihi.cc/soc1n','_blank');
         });
       }, 1800);
     });
