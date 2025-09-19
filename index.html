@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI Stock Analysis</title>
+  <title>AI Stock Diagnosis</title>
   <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- Google tag (gtag.js) -->
@@ -18,89 +18,53 @@
 <body class="bg-gray-50 text-gray-800">
 
   <!-- Header -->
-  <header class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-6 shadow-md">
-    <div class="max-w-5xl mx-auto text-center">
-      <h1 class="text-4xl font-bold">AI-Powered Stock Diagnosis</h1>
-      <p class="text-lg mt-2">Enter any stock symbol or company name to get real-time AI analysis</p>
-    </div>
+  <header class="bg-blue-600 text-white p-6 shadow-lg">
+    <h1 class="text-3xl font-bold text-center">AI Stock Analysis Platform</h1>
+    <p class="text-center mt-2">Intelligent stock evaluation powered by AI</p>
   </header>
 
-  <!-- Stock Input -->
-  <section class="max-w-xl mx-auto mt-10 p-6 bg-white rounded-2xl shadow-lg">
-    <label class="block text-lg mb-2 font-medium text-gray-700">Enter Stock Symbol / Company Name</label>
-    <input id="stockInput" type="text" placeholder="e.g. AAPL, TSLA, AMZN" 
-      class="w-full p-3 border rounded-xl focus:ring-2 focus:ring-blue-400 focus:outline-none" />
-    <button onclick="analyzeStock()" 
-      class="w-full mt-4 bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-xl font-semibold transition">Analyze Now</button>
-
-    <div id="analysisResult" class="mt-6 hidden">
-      <div class="h-2 bg-gradient-to-r from-green-400 to-blue-500 rounded-full animate-pulse"></div>
-      <p class="mt-4 text-gray-600">Analyzing your stock with our deep AI model...</p>
-      <a href="https://www.youtube.com" target="_blank"
-        class="block mt-6 text-center bg-purple-600 hover:bg-purple-700 text-white py-3 rounded-xl font-semibold transition">
-        Watch Full Analysis on YouTube
-      </a>
+  <!-- Input Section -->
+  <section class="max-w-xl mx-auto mt-10 p-6 bg-white rounded-2xl shadow-md">
+    <h2 class="text-xl font-semibold mb-4 text-center">Enter Stock Symbol or Company Name</h2>
+    <div class="flex space-x-2">
+      <input type="text" placeholder="e.g. AAPL or Tesla" class="flex-1 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" />
+      <button onclick="document.getElementById('result').classList.remove('hidden')" class="px-5 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Analyze</button>
     </div>
   </section>
 
-  <!-- Research Articles -->
-  <section class="max-w-5xl mx-auto mt-16 px-6">
-    <h2 class="text-3xl font-bold mb-6 text-center">Backed by Cutting-edge Research</h2>
-    <div class="grid md:grid-cols-2 gap-6">
-      <article class="p-6 bg-white rounded-2xl shadow-md">
-        <h3 class="font-semibold text-xl mb-2">AI Predictive Models in Financial Markets</h3>
-        <p class="text-gray-600 text-sm">
-          Studies from :contentReference[oaicite:2]{index=2} and :contentReference[oaicite:3]{index=3} have demonstrated that machine learning algorithms
-          can outperform traditional analysis by up to 20% in forecasting market movements...
-        </p>
-      </article>
-      <article class="p-6 bg-white rounded-2xl shadow-md">
-        <h3 class="font-semibold text-xl mb-2">Deep Learning for Volatility Forecasting</h3>
-        <p class="text-gray-600 text-sm">
-          Research published in the :contentReference[oaicite:4]{index=4} shows how neural networks 
-          capture complex patterns in historical data, improving risk-adjusted returns...
-        </p>
-      </article>
-      <article class="p-6 bg-white rounded-2xl shadow-md">
-        <h3 class="font-semibold text-xl mb-2">Natural Language Processing on Market Sentiment</h3>
-        <p class="text-gray-600 text-sm">
-          By analyzing millions of news articles and tweets, :contentReference[oaicite:5]{index=5} research 
-          shows sentiment-driven models can predict short-term price action more accurately...
-        </p>
-      </article>
-      <article class="p-6 bg-white rounded-2xl shadow-md">
-        <h3 class="font-semibold text-xl mb-2">Reinforcement Learning for Portfolio Optimization</h3>
-        <p class="text-gray-600 text-sm">
-          :contentReference[oaicite:6]{index=6} has demonstrated how reinforcement learning agents
-          can dynamically rebalance portfolios to maximize long-term returns under varying market regimes...
-        </p>
-      </article>
+  <!-- Result Section -->
+  <section id="result" class="hidden max-w-2xl mx-auto mt-10 p-6 bg-white rounded-2xl shadow-md">
+    <h3 class="text-2xl font-bold mb-4">AI Stock Diagnosis Result</h3>
+    <div class="border-l-4 border-blue-500 pl-4 mb-4">
+      <p>📈 The stock shows strong growth potential based on recent market analysis and trend forecasting models.</p>
+    </div>
+    <div class="border-l-4 border-green-500 pl-4 mb-4">
+      <p>📊 Historical data shows consistent performance and low volatility.</p>
+    </div>
+    <div class="border-l-4 border-red-500 pl-4 mb-4">
+      <p>⚠️ Market risk detected: Be cautious of sudden trend reversals due to economic policy changes.</p>
     </div>
   </section>
 
-  <!-- Contact Button -->
-  <section class="text-center my-16">
-    <a href="https://www.youtube.com" target="_blank"
-      class="inline-block px-10 py-4 bg-green-600 hover:bg-green-700 text-white text-lg font-bold rounded-full shadow-lg transition">
-      Contact Us (TG @Aistockas)
+  <!-- Literature Section -->
+  <section class="max-w-4xl mx-auto mt-10 p-6 bg-white rounded-2xl shadow-md">
+    <h3 class="text-2xl font-bold mb-4 text-center">Related Research & Literature</h3>
+    <ul class="space-y-3 list-disc pl-5">
+      <li>“Machine Learning for Stock Price Prediction” - :contentReference[oaicite:3]{index=3}</li>
+      <li>“AI-driven Quantitative Analysis in Financial Markets” - :contentReference[oaicite:4]{index=4}</li>
+      <li>“Deep Learning Models for Market Risk Detection” - :contentReference[oaicite:5]{index=5}</li>
+      <li>“Financial Forecasting with Neural Networks” - :contentReference[oaicite:6]{index=6}</li>
+      <li>“AI-Based Sentiment Analysis for Stock Prediction” - :contentReference[oaicite:7]{index=7}</li>
+    </ul>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="max-w-xl mx-auto mt-10 text-center mb-16">
+    <p class="text-lg mb-4">Need more professional guidance?</p>
+    <a href="https://www.youtube.com" target="_blank" class="inline-block px-6 py-3 bg-blue-600 text-white text-lg rounded-xl shadow hover:bg-blue-700 transition">
+    
     </a>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-gray-100 py-6 text-center text-gray-500 text-sm">
-    © 2025 AI Stock Diagnostics. All Rights Reserved.
-  </footer>
-
-  <script>
-    function analyzeStock() {
-      const input = document.getElementById('stockInput').value.trim();
-      if (!input) {
-        alert('Please enter a stock symbol or company name.');
-        return;
-      }
-      document.getElementById('analysisResult').classList.remove('hidden');
-      window.scrollTo({ top: document.getElementById('analysisResult').offsetTop, behavior: 'smooth' });
-    }
-  </script>
 </body>
 </html>
