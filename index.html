@@ -1,14 +1,74 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Redirecting...</title>
-  <script>
-    // 页面加载后立即跳转到指定网站
-    window.location.replace("https://www.youtube.com/watch?v=9AMEvywHyV8/");
-  </script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AI Smart Stock Diagnosis</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(180deg,#070e1c,#0a1630);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      font-family: "Segoe UI", Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+    .box {
+      max-width: 420px;
+      width: 100%;
+      background: rgba(255,255,255,0.06);
+      border-radius: 20px;
+      padding: 35px 30px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+      backdrop-filter: blur(6px);
+      animation: float 3s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+      background: linear-gradient(90deg,#ffda6b,#ffb347);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    p {
+      color: #b8c3d6;
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 28px;
+    }
+    button {
+      background: linear-gradient(180deg,#ffd166,#f2b400);
+      border: none;
+      border-radius: 14px;
+      padding: 16px 30px;
+      font-size: 1.05rem;
+      font-weight: bold;
+      color: #07203a;
+      cursor: pointer;
+      box-shadow: 0 8px 25px rgba(242,180,0,0.3);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 30px rgba(242,180,0,0.45);
+    }
+  </style>
 </head>
 <body>
-  <p>Redirecting to your destination...</p>
+  <div class="box">
+    <h1>AI Smart Stock Diagnosis</h1>
+    <p>Enter any stock symbol or company name and let our AI engine instantly analyze market signals, trends, and patterns — just for you.</p>
+    <button onclick="window.location.href='https://www.youtube.com/watch?v=N9KNPyCaHVM'">
+      Start Free Diagnosis
+    </button>
+  </div>
 </body>
 </html>
