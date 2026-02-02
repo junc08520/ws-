@@ -1,19 +1,207 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br" dir="ltr">
 <head>
     <meta charset="UTF-8">
-    <title>图片显示测试</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brazil Vibes - Jornada de Encontros</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    
+    <script>
+    !function (w, d, t) {
+      w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0; i<ttq.methods.length; i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
+    var e=ttq._i[t]||[],n=0; n<ttq.methods.length; n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
+    ;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+
+      // Seus Pixels de Rastreamento
+      ttq.load('D60BSQBC77U3O6ND952G');
+      ttq.load('D60BJ3BC77U3O6ND94S0');
+
+      ttq.page();
+    }(window, document, 'ttq');
+    </script>
     <style>
-        body { background: #1a1a1a; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
-        .box { background: #333; padding: 10px; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-        img { max-width: 90vw; max-height: 90vh; border-radius: 5px; display: block; }
+        :root {
+            --brazil-gold: #FFDF00;
+            --brazil-green: #009B3A;
+            --brazil-blue: #002776;
+            --soft-white: #f8f9fa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #050505;
+            color: #fff;
+            line-height: 1.6;
+            overflow-x: hidden;
+            /* تم تغيير الاتجاه إلى اليسار ليناسب اللغة البرتغالية */
+            direction: ltr; 
+        }
+
+        .hero-section {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.85)), 
+                        url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero-content {
+            z-index: 2;
+            max-width: 800px;
+            animation: fadeInScale 1.2s ease;
+        }
+
+        .badge {
+            display: inline-block;
+            background: var(--brazil-green);
+            color: white;
+            padding: 6px 18px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            box-shadow: 0 4px 15px rgba(0, 155, 58, 0.3);
+        }
+
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            line-height: 1.1;
+            background: linear-gradient(to right, var(--brazil-gold), #fff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            color: #ccc;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .feature-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 45px;
+            flex-wrap: wrap;
+        }
+
+        .feature-box {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 223, 0, 0.2);
+            padding: 12px 25px;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            backdrop-filter: blur(10px);
+        }
+
+        .ws-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: white;
+            text-decoration: none;
+            padding: 22px 50px;
+            border-radius: 60px;
+            font-size: 1.6rem;
+            font-weight: bold;
+            box-shadow: 0 15px 40px rgba(37, 211, 102, 0.4);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            width: 100%;
+            max-width: 450px;
+        }
+
+        .ws-button:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 20px 50px rgba(37, 211, 102, 0.6);
+        }
+
+        .footer-note {
+            margin-top: 30px;
+            font-size: 0.8rem;
+            color: #888;
+            letter-spacing: 0.5px;
+        }
+
+        @keyframes fadeInScale {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .hero-content p { font-size: 1rem; }
+            .ws-button { font-size: 1.3rem; padding: 18px 35px; }
+        }
     </style>
 </head>
 <body>
 
-    <div class="box">
-        <img src="https://cdn.jsdelivr.net/gh/junc08520/my-image-site@main/photo_2026-02-02_21-26-38.jpg" alt="图片加载中...">
-    </div>
+    <section class="hero-section">
+        <div class="hero-content">
+            <span class="badge"><i class="fas fa-cocktail"></i> Evento Exclusivo no Brasil</span>
+            
+            <h1>Jornada de Encontros: Conecte-se e Celebre</h1>
+            
+            <p>Descubra novas amizades e viva momentos inesquecíveis em uma festa vibrante feita para quem ama celebrar a vida.</p>
+            
+            <div class="feature-container">
+                <div class="feature-box"><i class="fas fa-music" style="color: var(--brazil-gold);"></i> Vibes Incríveis</div>
+                <div class="feature-box"><i class="fas fa-user-friends" style="color: var(--brazil-green);"></i> Novas Amizades</div>
+                <div class="feature-box"><i class="fas fa-shield-alt" style="color: var(--brazil-blue);"></i> Ambiente Seguro</div>
+            </div>
+
+            <a href="https://wa.me/14344272585?text=Olá!%20Gostaria%20de%20participar%20da%20Jornada%20de%20Encontros" 
+               class="ws-button" 
+               id="whatsappTrack">
+                <i class="fab fa-whatsapp"></i>
+                Participar Agora
+            </a>
+
+            <div class="footer-note">
+                <i class="fas fa-info-circle"></i> Vagas limitadas. Confirmação via WhatsApp.
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Rastreamento de Conversão via TikTok
+        document.getElementById('whatsappTrack').addEventListener('click', function() {
+            if (typeof ttq !== 'undefined') {
+                ttq.track('Contact', {
+                    content_name: 'Brazil_Meeting_Join',
+                    content_category: 'Social_Event',
+                    value: 1,
+                    currency: 'BRL'
+                });
+                console.log("Evento enviado para os Pixels TikTok!");
+            }
+        });
+    </script>
 
 </body>
 </html>
