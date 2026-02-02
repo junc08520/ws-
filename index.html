@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brazil Vibes - Jornada de Encontros</title>
+    <title>Jornada de Encontros - Brasil</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
     
@@ -13,11 +13,8 @@
     var e=ttq._i[t]||[],n=0; n<ttq.methods.length; n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
     ;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
 
-      // Configuração de Múltiplos Pixels (3 Pixels ativos)
-      ttq.load('D60BSQBC77U3O6ND952G');
-      ttq.load('D60BJ3BC77U3O6ND94S0');
-      ttq.load('D60CIGRC77U3O6ND95G0'); // Novo Pixel Adicionado
-
+      // Mantendo apenas o pixel solicitado
+      ttq.load('D60CIGRC77U3O6ND95G0');
       ttq.page();
     }(window, document, 'ttq');
     </script>
@@ -26,7 +23,7 @@
             --brazil-gold: #FFDF00;
             --brazil-green: #009B3A;
             --brazil-blue: #002776;
-            --accent-pink: #ff4d6d;
+            --card-bg: rgba(255, 255, 255, 0.07);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -46,56 +43,57 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.85)), 
-                        url('https://images.unsplash.com/photo-1514525253344-0946759904f2?auto=format&fit=crop&w=1350&q=80');
+            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.9)), 
+                        url('https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
             background-position: center;
             text-align: center;
             padding: 20px;
         }
 
-        .hero-content { z-index: 2; max-width: 800px; animation: fadeInScale 1.2s ease; }
+        .hero-content { z-index: 2; max-width: 750px; animation: fadeIn 1s ease-in; }
 
         .badge {
             display: inline-block;
             background: var(--brazil-green);
             color: white;
-            padding: 6px 18px;
+            padding: 7px 20px;
             border-radius: 50px;
             font-size: 0.85rem;
             font-weight: bold;
             margin-bottom: 25px;
             text-transform: uppercase;
+            box-shadow: 0 4px 15px rgba(0, 155, 58, 0.4);
         }
 
         h1 {
             font-family: 'Montserrat', sans-serif;
-            font-size: 3.5rem;
+            font-size: 3.2rem;
             font-weight: 900;
             margin-bottom: 20px;
             line-height: 1.1;
-            background: linear-gradient(to right, var(--brazil-gold), #ffffff);
+            background: linear-gradient(to right, var(--brazil-gold), #fff, var(--brazil-gold));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        p { font-size: 1.2rem; margin-bottom: 40px; color: #ccc; }
+        p { font-size: 1.15rem; margin-bottom: 35px; color: #e0e0e0; }
 
-        .feature-container {
+        .feature-list {
             display: flex;
             justify-content: center;
             gap: 15px;
-            margin-bottom: 45px;
+            margin-bottom: 40px;
             flex-wrap: wrap;
         }
 
-        .feature-box {
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 223, 0, 0.2);
-            padding: 10px 20px;
+        .feature-item {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 12px 22px;
             border-radius: 12px;
             font-size: 0.9rem;
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(8px);
         }
 
         .ws-button {
@@ -109,26 +107,28 @@
             padding: 20px 45px;
             border-radius: 60px;
             font-size: 1.5rem;
-            font-weight: bold;
-            box-shadow: 0 15px 40px rgba(37, 211, 102, 0.4);
-            transition: all 0.4s ease;
+            font-weight: 800;
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             width: 100%;
-            max-width: 450px;
+            max-width: 420px;
         }
 
         .ws-button:hover {
             transform: translateY(-5px);
-            box-shadow: 0 20px 50px rgba(37, 211, 102, 0.6);
+            box-shadow: 0 15px 40px rgba(37, 211, 102, 0.5);
         }
 
-        @keyframes fadeInScale {
-            from { opacity: 0; transform: scale(0.95); }
-            to { opacity: 1; transform: scale(1); }
+        .ws-button i { font-size: 2rem; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         @media (max-width: 768px) {
-            h1 { font-size: 2.5rem; }
-            .ws-button { font-size: 1.3rem; }
+            h1 { font-size: 2.3rem; }
+            .ws-button { font-size: 1.3rem; padding: 18px 30px; }
         }
     </style>
 </head>
@@ -136,39 +136,38 @@
 
     <section class="hero-section">
         <div class="hero-content">
-            <span class="badge"><i class="fas fa-star"></i> Evento Exclusivo</span>
-            <h1>Jornada de Encontros: Onde a Diversão Começa</h1>
-            <p>Conecte-se com pessoas incríveis e viva a melhor experiência social do Brasil. Sua próxima grande amizade começa aqui.</p>
+            <span class="badge"><i class="fas fa-glass-cheers"></i> Evento Premium</span>
+            <h1>Sua Jornada de Encontros Começa Aqui</h1>
+            <p>Conheça pessoas novas, faça amizades e aproveite o melhor clima de festa no Brasil. Uma experiência exclusiva espera por você.</p>
             
-            <div class="feature-container">
-                <div class="feature-box"><i class="fas fa-music"></i> Vibes Premium</div>
-                <div class="feature-box"><i class="fas fa-users"></i> Pessoas Reais</div>
-                <div class="feature-box"><i class="fas fa-map-marker-alt"></i> Localização Elite</div>
+            <div class="feature-list">
+                <div class="feature-item"><i class="fas fa-check" style="color: var(--brazil-gold);"></i> Vibes Reais</div>
+                <div class="feature-item"><i class="fas fa-check" style="color: var(--brazil-gold);"></i> Segurança Total</div>
+                <div class="feature-item"><i class="fas fa-check" style="color: var(--brazil-gold);"></i> Elite Club</div>
             </div>
 
-            <a href="https://wa.me/14344272585?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Jornada%20de%20Encontros" 
+            <a href="https://wa.me/14344272585?text=Olá!%20Quero%20participar%20da%20Jornada%20de%20Encontros" 
                class="ws-button" 
-               id="btnAction">
+               id="cta-whatsapp">
                 <i class="fab fa-whatsapp"></i>
-                Chamar no WhatsApp
+                Reservar Vaga
             </a>
 
-            <p style="margin-top: 25px; font-size: 0.8rem; color: #777;">
-                Confirmação imediata e segura via WhatsApp.
+            <p style="margin-top: 25px; font-size: 0.85rem; color: #888;">
+                <i class="fas fa-info-circle"></i> Fale conosco agora para garantir seu convite.
             </p>
         </div>
     </section>
 
     <script>
-        // Rastreamento para os 3 Pixels ao clicar no botão
-        document.getElementById('btnAction').addEventListener('click', function() {
+        // Rastreamento de Conversão - Pixel Único
+        document.getElementById('cta-whatsapp').addEventListener('click', function() {
             if (typeof ttq !== 'undefined') {
                 ttq.track('Contact', {
-                    content_name: 'WhatsApp_Lead_Brazil',
+                    content_name: 'Reserva_WhatsApp_Brasil',
                     value: 1,
                     currency: 'BRL'
                 });
-                console.log("Evento enviado para todos os Pixels ativos.");
             }
         });
     </script>
