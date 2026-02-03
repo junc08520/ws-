@@ -1,22 +1,169 @@
-生成适用于荷兰交友的TK广告素材横版的 纯背景 要懂得荷兰人的习性 3️⃣ 日常生活感，而不是“社交场景”
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verbind Direct | Jouw Match in de Buurt</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #FF4F00; /* 荷兰代表橙色，富有活力 */
+            --secondary-color: #1A2B49; /* 深蓝，代表专业正规 */
+            --bg-light: #F9FAFB;
+            --text-main: #333333;
+        }
 
-更容易接受
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-main);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
 
-下班路上
+        /* 落地页容器 */
+        .landing-container {
+            width: 90%;
+            max-width: 450px;
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            overflow: hidden;
+            text-align: center;
+            border: 1px solid #eee;
+        }
 
-骑自行车
+        /* 顶部状态栏 */
+        .status-bar {
+            background: #f1f1f1;
+            padding: 10px;
+            font-size: 0.85rem;
+            color: #666;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+        }
 
-在厨房倒咖啡
+        .online-dot {
+            width: 10px;
+            height: 10px;
+            background: #2ecc71;
+            border-radius: 50%;
+            display: inline-block;
+        }
 
-公园长椅 然后引导落地页  一、他们“会停下来”的 5 种广告感觉
-1️⃣ 像真人，不像广告（最重要）
+        /* 主体内容 */
+        .hero-section {
+            padding: 30px 20px;
+        }
 
-喜欢
+        .profile-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary-color);
+            margin-bottom: 15px;
+        }
 
-普通长相
+        h1 {
+            font-size: 1.5rem;
+            margin: 10px 0;
+            color: var(--secondary-color);
+        }
 
-手机前置自拍
+        p.description {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.5;
+            padding: 0 10px;
+        }
 
-灯光一般
+        /* WhatsApp 按钮 */
+        .ws-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            padding: 16px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin: 25px auto;
+            width: 80%;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 15px rgba(255, 79, 0, 0.3);
+        }
 
-有停顿、有犹豫 不要真人太明显  生成五个  我引导到落地页
+        .ws-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 79, 0, 0.4);
+        }
+
+        /* 装饰性标签 */
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .feature-tag {
+            font-size: 0.75rem;
+            background: #F0F4F8;
+            padding: 5px 12px;
+            border-radius: 4px;
+            color: var(--secondary-color);
+        }
+
+        /* 底部保障 */
+        .footer-note {
+            padding: 15px;
+            font-size: 0.75rem;
+            color: #999;
+            border-top: 1px solid #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+
+<div class="landing-container">
+    <div class="status-bar">
+        <span class="online-dot"></span> 
+        <strong>124 Leden online</strong> in jouw regio
+    </div>
+
+    <div class="hero-section">
+        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=300&q=80" alt="Profielfoto" class="profile-image">
+        
+        <h1>Ontmoet haar vandaag</h1>
+        <p class="description">
+            Echte connecties, geen gedoe. <br>
+            Direct contact via een beveiligde verbinding.
+        </p>
+
+        <div class="features">
+            <span class="feature-tag">✔ Geverifieerd</span>
+            <span class="feature-tag">✔ 100% Privé</span>
+            <span class="feature-tag">✔ Regio: Amsterdam</span>
+        </div>
+
+        <a href="https://wa.me/你的号码" class="ws-button">
+            Stuur een bericht
+        </a>
+    </div>
+
+    <div class="footer-note">
+        Door op de knop te klikken, accepteer je onze privacyvoorwaarden. <br>
+        © 2026 Verbind Direct NL
+    </div>
+</div>
+
+</body>
+</html>
