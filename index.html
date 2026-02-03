@@ -37,61 +37,84 @@
 
         .landing-container {
             width: 90%;
-            max-width: 450px;
+            max-width: 420px;
             background: #ffffff;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border-radius: 24px;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.12);
             overflow: hidden;
             text-align: center;
-            border: 1px solid #eee;
+            border: 1px solid rgba(0,0,0,0.05);
         }
 
         .status-bar {
-            background: #f1f1f1;
-            padding: 10px;
+            background: #F3F4F6;
+            padding: 12px;
             font-size: 0.85rem;
-            color: #666;
+            color: #4B5563;
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
         }
 
         .online-dot {
-            width: 10px;
-            height: 10px;
-            background: #2ecc71;
+            width: 8px;
+            height: 8px;
+            background: #10B981;
             border-radius: 50%;
             display: inline-block;
+            box-shadow: 0 0 8px #10B981;
         }
 
         .hero-section {
-            padding: 30px 20px;
+            padding: 40px 25px;
+        }
+
+        .profile-image-container {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 20px;
         }
 
         .profile-image {
-            width: 120px;
-            height: 120px;
+            width: 130px;
+            height: 130px;
             border-radius: 50%;
             object-fit: cover;
-            border: 3px solid var(--primary-color);
-            margin-bottom: 15px;
+            border: 4px solid #fff;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .verified-badge {
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            background: #3B82F6;
+            color: white;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            border: 2px solid #fff;
         }
 
         h1 {
-            font-size: 1.5rem;
-            margin: 10px 0;
+            font-size: 1.6rem;
+            margin: 0 0 10px 0;
             color: var(--secondary-color);
+            font-weight: 600;
         }
 
         p.description {
-            font-size: 1rem;
-            color: #666;
-            line-height: 1.5;
-            padding: 0 10px;
+            font-size: 0.95rem;
+            color: #6B7280;
+            line-height: 1.6;
+            margin-bottom: 25px;
         }
 
-        /* 按钮样式 */
         .ws-button {
             display: flex;
             align-items: center;
@@ -99,43 +122,44 @@
             background-color: var(--primary-color);
             color: white;
             text-decoration: none;
-            padding: 16px 30px;
-            border-radius: 50px;
+            padding: 18px 0;
+            border-radius: 12px;
             font-weight: 600;
             font-size: 1.1rem;
-            margin: 25px auto;
-            width: 80%;
-            transition: transform 0.2s, box-shadow 0.2s;
-            box-shadow: 0 4px 15px rgba(255, 79, 0, 0.3);
-            border: none;
-            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(255, 79, 0, 0.2);
         }
 
         .ws-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255, 79, 0, 0.4);
+            box-shadow: 0 15px 25px rgba(255, 79, 0, 0.3);
+            background-color: #e64600;
         }
 
         .features {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
-            gap: 15px;
-            margin-bottom: 30px;
+            gap: 10px;
+            margin-top: 25px;
         }
 
         .feature-tag {
             font-size: 0.75rem;
-            background: #F0F4F8;
-            padding: 5px 12px;
-            border-radius: 4px;
-            color: var(--secondary-color);
+            background: #EEF2FF;
+            padding: 6px 12px;
+            border-radius: 20px;
+            color: #4338CA;
+            font-weight: 500;
         }
 
         .footer-note {
-            padding: 15px;
+            padding: 20px;
             font-size: 0.75rem;
-            color: #999;
-            border-top: 1px solid #f5f5f5;
+            color: #9CA3AF;
+            background-color: #FAFAFA;
+            border-top: 1px solid #F3F4F6;
         }
     </style>
 </head>
@@ -144,39 +168,44 @@
 <div class="landing-container">
     <div class="status-bar">
         <span class="online-dot"></span> 
-        <strong>124 Leden online</strong> in jouw regio
+        <strong>124 Leden online</strong> in de buurt
     </div>
 
     <div class="hero-section">
-        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=300&q=80" alt="Profielfoto" class="profile-image">
+        <div class="profile-image-container">
+            <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=300&q=80" alt="Profielfoto" class="profile-image">
+            <div class="verified-badge">✓</div>
+        </div>
         
-        <h1>Ontmoet haar vandaag</h1>
+        <h1>Ontmoet haar nu</h1>
         <p class="description">
-            Echte connecties, geen gedoe. <br>
-            Direct contact via een beveiligde verbinding.
+            Echte profielen, geen tijdverspilling. <br>
+            Start direct een gesprek via WhatsApp.
         </p>
 
-        <div class="features">
-            <span class="feature-tag">✔ Geverifieerd</span>
-            <span class="feature-tag">✔ 100% Privé</span>
-            <span class="feature-tag">✔ Regio: Amsterdam</span>
-        </div>
-
-        <a href="https://api.whatsapp.com/send/?phone=17655566144&text=hello&type=phone_number&app_absent=0" class="ws-button" id="contactButton">
+        <a href="https://wa.me/14344272585?text=Hello" class="ws-button" id="contactButton">
             Stuur een bericht
         </a>
+
+        <div class="features">
+            <span class="feature-tag">Geverifieerd profiel</span>
+            <span class="feature-tag">Privacy gegarandeerd</span>
+            <span class="feature-tag">Regio: Amsterdam</span>
+        </div>
     </div>
 
     <div class="footer-note">
-        Door op de knop te klikken, accepteer je onze privacyvoorwaarden. <br>
+        Door verder te gaan, accepteer je onze privacyverklaring. <br>
         © 2026 Verbind Direct NL
     </div>
 </div>
 
 <script>
-    // 当用户点击按钮时，向 TikTok 发送 'Contact' 事件
+    // 点击按钮发送 TikTok 'Contact' 事件
     document.getElementById('contactButton').addEventListener('click', function() {
-        ttq.track('Contact');
+        if(typeof ttq !== 'undefined') {
+            ttq.track('Contact');
+        }
     });
 </script>
 
