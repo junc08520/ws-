@@ -5,10 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Verbind Direct | Jouw Match in de Buurt</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <script>
+    !function (w, d, t) {
+      w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
+    var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
+    ;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+
+      ttq.load('D610E13C77U2HKOKVFN0');
+      ttq.page();
+    }(window, document, 'ttq');
+    </script>
     <style>
         :root {
-            --primary-color: #FF4F00; /* 荷兰代表橙色，富有活力 */
-            --secondary-color: #1A2B49; /* 深蓝，代表专业正规 */
+            --primary-color: #FF4F00; /* 荷兰橙 */
+            --secondary-color: #1A2B49; /* 深蓝 */
             --bg-light: #F9FAFB;
             --text-main: #333333;
         }
@@ -24,7 +35,6 @@
             min-height: 100vh;
         }
 
-        /* 落地页容器 */
         .landing-container {
             width: 90%;
             max-width: 450px;
@@ -36,7 +46,6 @@
             border: 1px solid #eee;
         }
 
-        /* 顶部状态栏 */
         .status-bar {
             background: #f1f1f1;
             padding: 10px;
@@ -56,7 +65,6 @@
             display: inline-block;
         }
 
-        /* 主体内容 */
         .hero-section {
             padding: 30px 20px;
         }
@@ -83,7 +91,7 @@
             padding: 0 10px;
         }
 
-        /* WhatsApp 按钮 */
+        /* 按钮样式 */
         .ws-button {
             display: flex;
             align-items: center;
@@ -99,6 +107,8 @@
             width: 80%;
             transition: transform 0.2s, box-shadow 0.2s;
             box-shadow: 0 4px 15px rgba(255, 79, 0, 0.3);
+            border: none;
+            cursor: pointer;
         }
 
         .ws-button:hover {
@@ -106,7 +116,6 @@
             box-shadow: 0 6px 20px rgba(255, 79, 0, 0.4);
         }
 
-        /* 装饰性标签 */
         .features {
             display: flex;
             justify-content: center;
@@ -122,7 +131,6 @@
             color: var(--secondary-color);
         }
 
-        /* 底部保障 */
         .footer-note {
             padding: 15px;
             font-size: 0.75rem;
@@ -154,7 +162,7 @@
             <span class="feature-tag">✔ Regio: Amsterdam</span>
         </div>
 
-        <a href="https://wa.me/你的号码" class="ws-button">
+        <a href="https://wa.me/你的号码" class="ws-button" id="contactButton">
             Stuur een bericht
         </a>
     </div>
@@ -164,6 +172,13 @@
         © 2026 Verbind Direct NL
     </div>
 </div>
+
+<script>
+    // 当用户点击按钮时，向 TikTok 发送 'Contact' 事件
+    document.getElementById('contactButton').addEventListener('click', function() {
+        ttq.track('Contact');
+    });
+</script>
 
 </body>
 </html>
