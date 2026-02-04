@@ -3,293 +3,246 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rendez-vous Café | Votre Évasion Romantique à Paris</title>
-    <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Playfair+Display:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <title>Instant Café | Une Rencontre Inattendue</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,400&family=Cormorant+Garamond:ital,wght@1,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
     <style>
         :root {
-            --primary-dark: #4A3E4E; /* 深灰紫，浪漫基调 */
-            --primary-light: #C7B7B8; /* 柔和粉灰 */
-            --accent-gold: #D4AF37; /* 法式金色点缀 */
-            --bg-creme: #FCF8F5; /* 奶油白背景 */
-            --text-main: #3C3C3C;
-            --text-secondary: #707070;
-            --whatsapp-green: #25D366;
+            --rose-taupe: #9E8276;
+            --gold-leaf: #C5A059;
+            --soft-white: #FAF9F6;
+            --deep-noir: #2C2C2C;
+            --glass-bg: rgba(255, 255, 255, 0.85);
         }
 
         body {
-            font-family: 'Lato', sans-serif;
-            background-color: var(--bg-creme);
-            color: var(--text-main);
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #f5f1ed 0%, #e2d7d0 100%);
             margin: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             padding: 20px;
-            box-sizing: border-box;
-            background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNDN0I3QjgiIGZpbGwtb3BhY2l0eT0iMC4xIj48cGF0aCBkPSJNMjkuODA5IDY4LjE2NFY1Ni41NzZjMC0uNzY4LS42MjEtMS4zOS0xLjM5LTEuMzlIMjYuNWMtLjc2OSAwLTEuMzkxLjYyMi0xLjM5MSAxLjM5djExLjU4OGMwIC43NjkuNjIyIDEuMzkgMS4zOTEgMS4zOWgyLjAxOWMuNzcgMCAxLjM5LS42MjIgMS4zOS0xLjM5ek01LjkyMSAzOC42MTljLjU1MyAwIDEuMDAyLS40NDkgMS4wMDItMS4wMDJWMTAuOTQ1YzAtLjU1NC0uNDQ5LTEuMDAzLTEuMDAyLTEuMDAzSDQuOTU0Yy0uNTU0IDAtMS4wMDMuNDQ5LTEuMDAzIDEuMDAzdjI2LjY3MmMwIC41NTMuNDQ5IDEuMDAyIDEuMDAzIDEuMDAyaC45Njd6TTM2LjQ0OCA4LjI2NWwuNjUyLjY3NmMuMjg2LjI5NS40NDguNjg1LjQ0OCAxLjEwMnYyNi45OTdjMCAuNTU0LS40NDkuOTk5LTEuMDA0Ljk5OWgtLjk5N2MtLjU1NCAwLTEuMDAzLS40NDYtMS4wMDMtLjk5OVY1LjY3MmMwLS40MTcuMTYyLS44MTEuNDQ4LTEuMTA2bC42NTItLjY4Yy42LS42MTggMS4wMzQtLjczNyAxLjA3Ni0uNzRzLjQ3Ni4wMDkuODcuMjkzbC4xMzYuMTQyYy40MzIuNDUxLjcwMi41OTEuODA2LjQxMi4wNS0uMDguMTE0LS4zMjkuMTY1LS43MDZsLjEyMS0uODYzYy4wMy0uMjMyLjAxLS41LS4wNTgtLjc0NC0uMDg4LS4zNjktLjI1MS0uNjczLS40NzQt.5Mi0uNTYtLjIyNi0xLjEtLjM4LTEuNjIyLS4zODBIMzYuNDQ4YzAtLjAwNy0xLjEwNC0uMDc0LTIuMjQ2IDEuMzY2LS40MjUuNTItLjc0NC43NTQtLjg2LjczNy0uNDEyLS4wNi0uNzI0LS4zOTctLjc5LS42MTRsLS41NDYtLjM1Yy0uMTQ0LS4xMDQtLjIzLS4yNTItLjIzLS40MDNWNS44NDljMC0uNTUyLjQ0OS0uOTk2IDEuMDAzLS45OTZoLjk5N2MuNTU1IDAgMS4wMDQuNDQ0IDEuMDA0Ljk5NlY1LjkyYy0uMDAxLjE4LS4xNDIuMjgyLS4yNDUuMzc2bC0uNjc1LjU3NmMtLjIzNy4yMDEtLjM5MS41MDgtLjM5MS44MzMgMCAuNDIuMTY0LjguNDQ5IDEuMTAzbC42NDUuNjdjLjUyNS40OTYuOTEuODQ2.OTQ4Ljg5OC4wNTMuMDc0LjEyLjE5Ni4xMjEuMzQ0eiIvPjxwYXRoIGQ9Ik0zMC4wNjYgMTkuMDM3Yy01LjUwNC0uMDQyLTkuMjAzLTMuMjU3LTkuMjAzLTYuNTM1IDAtMy4yNzUgMy41OTgtNi41MzYgOS4yMDMtNi41MzYgNS42MDggMCA5LjIwNCAzLjI2MSA5LjIwNCA2LjUzNiAwIDMuMjc4LTMuNTk2IDYuNDkzLTkuMjA0IDYuNTM1em0tLjAyLTMuODk4YzEuOTkxLjAyIDMuNjQ1LTEuMzIgMy43MDctMi43NzQtLjY2My0uMTctMS42NjMtLjIzLTMuNDU1LS4yMy00LjE2NiAwLTcuNDMyIDEuODQyLTcuNDMyIDQuNzQ0IDAgMi42NjcgMi45MjggNC42MTIgNi43OCAzLjg0em0xOC4xNzMtMTMuODcyYy0uODU3LS4wNzgtMS43OTctLjA4MS0zLjA4MS0uMDU1LTQuMTEyLS40MjUtNy4wMi0zLjM1MS03LjAyLTYuNTIzIDAtMy4xNzIgMy4wMjQtNi41NTggNy41ODItNi41NTggNC42NTMgMCA3Ljg0NiAzLjQwOSA3Ljg0NiA2LjU1OCAwIDMuMDkxLTIuNzk4IDYuMDM2LTcuMzIyIDYuNTIzem0tLjMyMi0zLjg0NmMxLjA3Ni4wNjQgMi4wNDktLjI4NyAyLjQwNi0uODY4LjczNC0uMDMgMS4yNDctLjA0NSAxLjc2Ny0uMTQ2LS44NDQtLjA4Mi0xLjQ0My0uNDMzLTMuMDM3LTEuNzcxLS41ODktLjQ4OC0uOTg4LS44MTEtMS4wMi0uODE2LS4zMTUtLjEyNS0uMzg3LS4xMjctLjUyOC0uMDQ0LS4zODUuMjIyLS40MzcuNjk1LS40NDcuNzQ0LS4wMzYuMjA2LS4wOTguNDc5LS4xNjguNzY2LS4wMDkuMDQyLS4wMi4wODgtLjAzMS4xMzItLjEwNy40NTctLjMxMi44NDUtLjQ5NSAxLjE5Mi0uNTM3Ljg5Mi0uOTE3IDEuMTg5LS45MTcgMi4wMTMtLjAwMi4xNTUuMDQyLjMwNC4xMzcuNDMzLjA5Ny4xMzYuMjI0LjI1NS4zNjYuMzU0eiIvPjwvZz48L2c+PC9zdmc+'); /* 几何背景纹理 */
-            background-size: 80px 80px;
+            color: var(--deep-noir);
         }
 
-        .landing-container {
+        /* 背景艺术装饰 */
+        .bg-decoration {
+            position: fixed;
+            top: 0;
+            left: 0;
             width: 100%;
-            max-width: 550px; /* 略微扩大容器 */
-            background: #ffffff;
-            border-radius: 20px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            height: 100%;
+            z-index: -1;
             overflow: hidden;
-            text-align: center;
-            border: 1px solid #e0e0e0;
-            position: relative; /* 用于装饰性元素定位 */
+            opacity: 0.4;
         }
 
-        .hero-image {
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            background: var(--rose-taupe);
+            filter: blur(80px);
+        }
+
+        /* 落地页主容器 */
+        .card {
             width: 100%;
-            height: 280px; /* 增加图片高度 */
-            object-fit: cover;
-            object-position: center;
-            border-bottom: 6px solid var(--primary-dark);
-            filter: brightness(0.95); /* 略微柔和图片 */
+            max-width: 440px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border-radius: 30px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.5);
+            animation: fadeIn 1s ease-out;
         }
 
-        .content-section {
-            padding: 35px 30px; /* 增加内边距 */
-            position: relative;
-            z-index: 2; /* 确保内容在装饰之上 */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
-        h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem; /* 增大标题 */
-            color: var(--primary-dark);
-            margin-bottom: 10px;
-            line-height: 1.1;
-            font-weight: 700;
+        /* 顶部视觉图 */
+        .header-img {
+            width: 100%;
+            height: 260px;
+            background: url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80') center/cover;
             position: relative;
         }
-        h1::after {
+
+        .header-img::after {
             content: '';
-            display: block;
-            width: 60px;
-            height: 2px;
-            background: var(--accent-gold);
-            margin: 10px auto 0;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            background: linear-gradient(transparent, var(--glass-bg));
         }
 
-        .subtitle {
-            font-family: 'Parisienne', cursive; /* 浪漫手写字体 */
-            font-size: 1.8rem;
-            color: var(--primary-light);
-            margin-bottom: 25px;
-            font-weight: normal;
+        .status-tag {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--rose-taupe);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
         }
 
-        h2 {
+        /* 内容区 */
+        .content {
+            padding: 0 35px 40px;
+            text-align: center;
+        }
+
+        .main-title {
             font-family: 'Playfair Display', serif;
-            font-size: 1.6rem;
-            color: var(--primary-dark);
-            margin-top: 35px;
-            margin-bottom: 15px;
-            position: relative;
-        }
-        h2::before {
-            content: '—';
-            margin-right: 10px;
-            color: var(--accent-gold);
-        }
-        h2::after {
-            content: '—';
-            margin-left: 10px;
-            color: var(--accent-gold);
+            font-size: 2.2rem;
+            margin: 0;
+            color: var(--deep-noir);
         }
 
-        p {
-            font-size: 1rem;
+        .tagline {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 1.4rem;
+            color: var(--gold-leaf);
+            margin-top: 5px;
+            margin-bottom: 25px;
+        }
+
+        .divider {
+            width: 40px;
+            height: 1px;
+            background: var(--gold-leaf);
+            margin: 20px auto;
+        }
+
+        p.intro {
+            font-size: 0.95rem;
             line-height: 1.8;
-            color: var(--text-secondary);
-            margin-bottom: 20px;
-            max-width: 450px;
-            margin-left: auto;
-            margin-right: auto;
+            color: #555;
+            font-weight: 300;
         }
 
-        .details-list {
-            list-style: none;
-            padding: 0;
+        /* 精致列表 */
+        .feature-box {
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 20px;
+            padding: 20px;
             margin: 25px 0;
             text-align: left;
-            color: var(--text-main);
-            max-width: 350px;
-            margin-left: auto;
-            margin-right: auto;
+            border: 1px dashed var(--rose-taupe);
         }
 
-        .details-list li {
-            font-size: 1rem;
-            margin-bottom: 12px;
+        .feature-item {
             display: flex;
-            align-items: flex-start; /* 调整对齐方式 */
-            gap: 12px;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 12px;
+            font-size: 0.9rem;
         }
 
-        .details-list li strong {
-            color: var(--primary-dark);
-            font-weight: 700;
+        .feature-item i {
+            color: var(--gold-leaf);
+            width: 18px;
         }
 
-        .icon {
-            font-size: 1.3rem;
-            color: var(--accent-gold);
-            min-width: 20px; /* 确保图标对齐 */
-            text-align: center;
-            padding-top: 2px; /* 微调图标垂直位置 */
-        }
-
-        .ws-button {
-            display: inline-flex;
+        /* WhatsApp 按钮 */
+        .btn-ws {
+            display: flex;
             align-items: center;
             justify-content: center;
-            background-color: var(--whatsapp-green);
+            background: var(--rose-taupe);
             color: white;
             text-decoration: none;
-            padding: 18px 35px; /* 增大按钮 */
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 1.25rem; /* 增大字体 */
-            margin-top: 40px;
-            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
-            border: none;
-            cursor: pointer;
+            padding: 18px;
+            border-radius: 15px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: all 0.4s;
+            box-shadow: 0 10px 20px rgba(158, 130, 118, 0.3);
+            margin-top: 30px;
         }
 
-        .ws-button:hover {
-            background-color: #1DA851;
-            transform: translateY(-3px);
-            box-shadow: 0 12px 30px rgba(37, 211, 102, 0.5);
+        .btn-ws:hover {
+            background: #8a6f64;
+            transform: scale(1.02);
+            box-shadow: 0 15px 30px rgba(158, 130, 118, 0.4);
         }
 
-        .ws-button .whatsapp-icon {
+        .btn-ws i {
+            font-size: 1.4rem;
             margin-right: 12px;
-            font-size: 1.6rem;
         }
 
-        .footer-note {
-            padding: 25px;
-            font-size: 0.85rem;
-            color: #A0A0A0;
-            background-color: #F8F4F1;
-            border-top: 1px solid #f0e0d0;
-            line-height: 1.6;
+        .footer {
+            margin-top: 25px;
+            font-size: 0.75rem;
+            color: #999;
+            font-weight: 300;
         }
 
-        /* 装饰性元素 */
-        .decoration-petal {
-            position: absolute;
-            background: rgba(var(--accent-gold), 0.1);
-            border-radius: 50%;
-            pointer-events: none;
-            opacity: 0.6;
-            z-index: 1;
-        }
-        .decoration-petal.top-left { top: 20px; left: 20px; width: 60px; height: 60px; transform: rotate(15deg); }
-        .decoration-petal.bottom-right { bottom: 20px; right: 20px; width: 80px; height: 80px; transform: rotate(-30deg); }
-
-
-        /* 响应式调整 */
-        @media (max-width: 480px) {
-            .landing-container {
-                border-radius: 15px;
-            }
-            .hero-image {
-                height: 200px;
-                border-bottom: 4px solid var(--primary-dark);
-            }
-            .content-section {
-                padding: 25px 15px;
-            }
-            h1 {
-                font-size: 2rem;
-            }
-            .subtitle {
-                font-size: 1.5rem;
-                margin-bottom: 15px;
-            }
-            h2 {
-                font-size: 1.3rem;
-                margin-top: 25px;
-            }
-            p {
-                font-size: 0.9rem;
-            }
-            .details-list {
-                max-width: 90%;
-            }
-            .details-list li {
-                font-size: 0.9rem;
-            }
-            .ws-button {
-                padding: 15px 25px;
-                font-size: 1.1rem;
-            }
-            .ws-button .whatsapp-icon {
-                font-size: 1.3rem;
-            }
-            .footer-note {
-                padding: 18px;
-                font-size: 0.75rem;
-            }
-            .decoration-petal { display: none; } /* 小屏幕上隐藏装饰 */
+        .footer strong {
+            color: var(--rose-taupe);
         }
     </style>
 </head>
 <body>
 
-<div class="landing-container">
-    <div class="decoration-petal top-left"></div>
-    <div class="decoration-petal bottom-right"></div>
-
-    <img src="https://images.unsplash.com/photo-1541167760410-b99b350f9685?auto=format&fit=crop&w=1000&q=80" alt="Scène romantique de café parisien" class="hero-image">
-    
-    <div class="content-section">
-        <h1>Un Café, Un Moment...</h1>
-        <p class="subtitle">Votre Rendez-vous Élégant à Paris</p>
-        
-        <p>
-            Évadez-vous dans l'ambiance chaleureuse d'un café parisien. 
-            Nous vous invitons à une rencontre unique, où les discussions prennent vie 
-            autour d'une tasse fumante et de sourires partagés. 
-            Un après-midi parfait pour tisser de nouvelles amitiés ou simplement 
-            profiter d'un échange agréable.
-        </p>
-
-        <h2>Découvrez les Charmes de la Rencontre :</h2>
-        <ul class="details-list">
-            <li><span class="icon"><i class="fas fa-map-marker-alt"></i></span> <strong>Lieu Enchanteur :</strong> Au cœur du Marais, un café typiquement parisien vous attend.</li>
-            <li><span class="icon"><i class="fas fa-calendar-alt"></i></span> <strong>Prochaine Date :</strong> Un après-midi décontracté très bientôt.</li>
-            <li><span class="icon"><i class="fas fa-heart"></i></span> <strong>Esprit :</strong> Partage, convivialité et belles découvertes.</li>
-        </ul>
-
-        <p>
-            Chaque rencontre est une nouvelle histoire. 
-            Les places sont délicatement limitées pour préserver l'intimité et la qualité des échanges. 
-            Ne manquez pas cette opportunité de créer de précieux souvenirs.
-        </p>
-
-        <a href="https://wa.me/你的WhatsApp号码?text=Bonjour!%20Je%20souhaite%20en%20savoir%20plus%20sur%20les%20prochaines%20rencontres%20Café%20à%20Paris." 
-           class="ws-button" 
-           target="_blank" 
-           rel="noopener noreferrer">
-            <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span> Réserver ma place confidentiellement
-        </a>
+    <div class="bg-decoration">
+        <div class="circle" style="width: 300px; height: 300px; top: -100px; right: -50px;"></div>
+        <div class="circle" style="width: 250px; height: 250px; bottom: -50px; left: -50px; background: #C5A059; opacity: 0.2;"></div>
     </div>
 
-    <div class="footer-note">
-        Organisé avec passion par [您的组织/姓名]. <br>
-        Votre discrétion et votre bien-être sont nos priorités.
+    <div class="card">
+        <div class="header-img">
+            <span class="status-tag">Uniquement sur invitation</span>
+        </div>
+
+        <div class="content">
+            <h1 class="main-title">Instant Partagé</h1>
+            <div class="tagline">La douceur d'un café à deux</div>
+            
+            <p class="intro">
+                Laissez-vous tenter par une parenthèse enchantée. Une rencontre authentique, sans artifice, pour savourer le moment présent dans un cadre intimiste.
+            </p>
+
+            <div class="divider"></div>
+
+            <div class="feature-box">
+                <div class="feature-item">
+                    <i class="fas fa-location-arrow"></i>
+                    <span><strong>Lieu :</strong> Un endroit discret près de chez vous</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-feather-alt"></i>
+                    <span><strong>Ambiance :</strong> Calme, élégante et propice à l'échange</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-star"></i>
+                    <span><strong>Privilège :</strong> Groupe restreint pour plus de complicité</span>
+                </div>
+            </div>
+
+            <a href="https://wa.me/33600000000?text=Bonjour,%20j'aimerais%20en%20savoir%20plus%20sur%20votre%20rendez-vous%20café." class="btn-ws">
+                <i class="fab fa-whatsapp"></i>
+                Rejoindre l'invitation
+            </a>
+
+            <div class="footer">
+                Prochainement dans <strong>votre quartier</strong>.<br>
+                Confirmation privée après premier contact.
+            </div>
+        </div>
     </div>
-</div>
 
 </body>
 </html>
