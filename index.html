@@ -7,6 +7,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,400&family=Cormorant+Garamond:ital,wght@1,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
+    <script>
+    !function (w, d, t) {
+      w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
+    var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
+    ;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+
+      ttq.load('D61JC73C77U5QAK8V000');
+      ttq.page();
+    }(window, document, 'ttq');
+    </script>
     <style>
         :root {
             --rose-taupe: #9E8276;
@@ -28,7 +38,6 @@
             color: var(--deep-noir);
         }
 
-        /* 背景艺术装饰 */
         .bg-decoration {
             position: fixed;
             top: 0;
@@ -47,7 +56,6 @@
             filter: blur(80px);
         }
 
-        /* 落地页主容器 */
         .card {
             width: 100%;
             max-width: 440px;
@@ -65,7 +73,6 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* 顶部视觉图 */
         .header-img {
             width: 100%;
             height: 260px;
@@ -96,7 +103,6 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.05);
         }
 
-        /* 内容区 */
         .content {
             padding: 0 35px 40px;
             text-align: center;
@@ -132,7 +138,6 @@
             font-weight: 300;
         }
 
-        /* 精致列表 */
         .feature-box {
             background: rgba(255, 255, 255, 0.5);
             border-radius: 20px;
@@ -155,7 +160,6 @@
             width: 18px;
         }
 
-        /* WhatsApp 按钮 */
         .btn-ws {
             display: flex;
             align-items: center;
@@ -232,7 +236,7 @@
                 </div>
             </div>
 
-            <a href="https://wa.me/17655566144?text=hello." class="btn-ws">
+            <a href="https://wa.me/17655566144?text=hello." class="btn-ws" onclick="ttq.track('Contact');">
                 <i class="fab fa-whatsapp"></i>
                 Rejoindre l'invitation
             </a>
