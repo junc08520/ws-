@@ -3,234 +3,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instant Café | Une Rencontre Inattendue</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,400&family=Cormorant+Garamond:ital,wght@1,500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
-    <script>
-    !function (w, d, t) {
-      w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
-    var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
-    ;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
-
-      ttq.load('D61JC73C77U5QAK8V000');
-      ttq.page();
-    }(window, document, 'ttq');
-    </script>
+    <title>L'Art de Vivre | Instant Café</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
     <style>
         :root {
-            --rose-taupe: #9E8276;
-            --gold-leaf: #C5A059;
-            --soft-white: #FAF9F6;
-            --deep-noir: #2C2C2C;
-            --glass-bg: rgba(255, 255, 255, 0.85);
+            --cafe-noir: #2C2420;
+            --cafe-au-lait: #D4B996;
+            --soft-creme: #FDFBF8;
+            --text-gray: #5A5A5A;
+            --accent-gold: #C5A059;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
         body {
             font-family: 'Montserrat', sans-serif;
-            background: linear-gradient(135deg, #f5f1ed 0%, #e2d7d0 100%);
-            margin: 0;
+            background-color: var(--soft-white);
+            color: var(--cafe-noir);
+            line-height: 1.6;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            padding: 20px;
-            color: var(--deep-noir);
         }
 
-        .bg-decoration {
-            position: fixed;
-            top: 0;
-            left: 0;
+        /* 容器设计 */
+        .page-container {
             width: 100%;
-            height: 100%;
-            z-index: -1;
-            overflow: hidden;
-            opacity: 0.4;
-        }
-
-        .circle {
-            position: absolute;
-            border-radius: 50%;
-            background: var(--rose-taupe);
-            filter: blur(80px);
-        }
-
-        .card {
-            width: 100%;
-            max-width: 440px;
-            background: var(--glass-bg);
-            backdrop-filter: blur(10px);
-            border-radius: 30px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
-            overflow: hidden;
-            border: 1px solid rgba(255,255,255,0.5);
-            animation: fadeIn 1s ease-out;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .header-img {
-            width: 100%;
-            height: 260px;
-            background: url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80') center/cover;
+            max-width: 480px;
+            background: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 0 40px rgba(0,0,0,0.05);
             position: relative;
         }
 
-        .header-img::after {
+        /* 顶部大图 */
+        .hero-banner {
+            width: 100%;
+            height: 320px;
+            background: url('https://images.unsplash.com/photo-1507133750040-4a8f57021571?auto=format&fit=crop&w=800&q=80') center/cover;
+            position: relative;
+        }
+
+        .hero-banner::after {
             content: '';
             position: absolute;
             bottom: 0;
             left: 0;
             width: 100%;
-            height: 60px;
-            background: linear-gradient(transparent, var(--glass-bg));
+            height: 80px;
+            background: linear-gradient(to top, #ffffff, transparent);
         }
 
-        .status-tag {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: rgba(255, 255, 255, 0.9);
-            padding: 6px 15px;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: var(--rose-taupe);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-        }
-
-        .content {
-            padding: 0 35px 40px;
+        /* 内容区域 */
+        .main-content {
+            padding: 20px 40px 60px;
             text-align: center;
+            flex-grow: 1;
         }
 
-        .main-title {
+        .category {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--cafe-au-lait);
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--cafe-noir);
+            line-height: 1.2;
+        }
+
+        .italic-text {
             font-family: 'Playfair Display', serif;
-            font-size: 2.2rem;
-            margin: 0;
-            color: var(--deep-noir);
+            font-style: italic;
+            color: var(--text-gray);
+            font-size: 1.1rem;
+            margin-bottom: 30px;
         }
 
-        .tagline {
-            font-family: 'Cormorant Garamond', serif;
-            font-style: italic;
-            font-size: 1.4rem;
-            color: var(--gold-leaf);
-            margin-top: 5px;
-            margin-bottom: 25px;
+        .description {
+            font-size: 0.95rem;
+            color: var(--text-gray);
+            font-weight: 300;
+            margin-bottom: 40px;
+            padding: 0 10px;
+        }
+
+        /* 核心按钮 */
+        .cta-button {
+            display: inline-block;
+            background-color: var(--cafe-noir);
+            color: #ffffff !important;
+            text-decoration: none;
+            padding: 18px 45px;
+            border-radius: 2px; /* 采用硬朗切角，更显高端 */
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(44, 36, 32, 0.2);
+            animation: pulse 2s infinite;
+        }
+
+        .cta-button:hover {
+            background-color: var(--accent-gold);
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px rgba(197, 160, 89, 0.3);
+        }
+
+        /* 底部信息 */
+        .footer-info {
+            font-size: 0.8rem;
+            color: #AFAFAF;
+            margin-top: 50px;
+            padding-bottom: 30px;
         }
 
         .divider {
-            width: 40px;
+            width: 30px;
             height: 1px;
-            background: var(--gold-leaf);
-            margin: 20px auto;
+            background: var(--cafe-au-lait);
+            margin: 0 auto 30px;
         }
 
-        p.intro {
-            font-size: 0.95rem;
-            line-height: 1.8;
-            color: #555;
-            font-weight: 300;
+        /* 动画 */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+            100% { transform: scale(1); }
         }
 
-        .feature-box {
-            background: rgba(255, 255, 255, 0.5);
-            border-radius: 20px;
-            padding: 20px;
-            margin: 25px 0;
-            text-align: left;
-            border: 1px dashed var(--rose-taupe);
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
-        .feature-item {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 12px;
-            font-size: 0.9rem;
-        }
-
-        .feature-item i {
-            color: var(--gold-leaf);
-            width: 18px;
-        }
-
-        .btn-ws {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: var(--rose-taupe);
-            color: white;
-            text-decoration: none;
-            padding: 18px;
-            border-radius: 15px;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-            transition: all 0.4s;
-            box-shadow: 0 10px 20px rgba(158, 130, 118, 0.3);
-            margin-top: 30px;
-        }
-
-        .btn-ws:hover {
-            background: #8a6f64;
-            transform: scale(1.02);
-            box-shadow: 0 15px 30px rgba(158, 130, 118, 0.4);
-        }
-
-        .btn-ws i {
-            font-size: 1.4rem;
-            margin-right: 12px;
-        }
-
-        .footer {
-            margin-top: 25px;
-            font-size: 0.75rem;
-            color: #999;
-            font-weight: 300;
-        }
-
-        .footer strong {
-            color: var(--rose-taupe);
+        .animate {
+            animation: fadeIn 1s ease forwards;
         }
     </style>
 </head>
 <body>
 
-    <div class="bg-decoration">
-        <div class="circle" style="width: 300px; height: 300px; top: -100px; right: -50px;"></div>
-        <div class="circle" style="width: 250px; height: 250px; bottom: -50px; left: -50px; background: #C5A059; opacity: 0.2;"></div>
-    </div>
+    <div class="page-container">
+        <div class="hero-banner"></div>
 
-    <div class="card">
-        <div class="header-img">
-            <span class="status-tag">Uniquement sur invitation</span>
-        </div>
-
-        <div class="content">
-            <h1 class="main-title">Instant Partagé</h1>
-            <div class="tagline">La douceur d'un café à deux</div>
+        <div class="main-content">
+            <p class="category animate">Culture & Détente</p>
+            <h1 class="animate">L'Instant Café</h1>
             
-            <p class="intro">
-                Laissez-vous tenter par une parenthèse enchantée. Une rencontre authentique, sans artifice, pour savourer le moment présent dans un cadre intimiste.
+            <p class="italic-text animate" style="animation-delay: 0.2s;">
+                "La vie est une question de moments, ne les manquez pas."
+            </p>
+            
+            <div class="divider animate" style="animation-delay: 0.4s;"></div>
+
+            <p class="description animate" style="animation-delay: 0.4s;">
+                Découvrez l'élégance du café à la française. Un moment de calme, une saveur authentique et une conversation qui inspire. Plongez dans notre univers dédié au bien-être et au plaisir simple.
             </p>
 
-            <div class="divider"></div>
-
-    
-            <a href="https://wa.me/17655566144?text=Bonjour." class="btn-ws" onclick="ttq.track('Contact');">
-                <i class="fab fa-whatsapp"></i>
-                J’accepte l’invitation.
-
+            <a href="https://wa.me/17655566144?text=Bonjour" class="cta-button animate" style="animation-delay: 0.6s;">
+                EN SAVOIR PLUS
             </a>
 
-            <div class="footer">
-                Prochainement dans <strong>votre quartier</strong>.<br>
-                Confirmation privée après premier contact.
+            <div class="footer-info animate" style="animation-delay: 0.8s;">
+                © 2026 Art de Vivre - Passion Café<br>
+                Expérience locale & authentique
             </div>
         </div>
     </div>
