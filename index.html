@@ -14,14 +14,14 @@
 
     body {
       margin: 0;
-      font-family: "Playfair Display", "Georgia", serif; /* 土耳其语在衬线体下非常有档次 */
+      font-family: "Playfair Display", "Georgia", serif;
       background: var(--bg-gradient);
       color: var(--deep-text);
       -webkit-font-smoothing: antialiased;
     }
 
     .container {
-      max-width: 600px; /* 缩小宽度，在移动端更紧凑专业 */
+      max-width: 600px;
       margin: 0 auto;
       padding: 60px 24px 80px;
       text-align: center;
@@ -81,7 +81,7 @@
     .cta a {
       display: inline-block;
       padding: 18px 50px;
-      background: #3e2723; /* 深浓咖啡色按钮 */
+      background: #3e2723;
       color: #ffffff;
       text-decoration: none;
       font-size: 18px;
@@ -104,7 +104,6 @@
       letter-spacing: 0.5px;
     }
 
-    /* 装饰元素 */
     .divider {
       width: 50px;
       height: 2px;
@@ -112,6 +111,38 @@
       margin: 30px auto;
     }
   </style>
+
+  <!-- TikTok Pixel Code Start -->
+  <script>
+  !function(w,d,t){
+    w.TiktokAnalyticsObject=t;
+    var ttq=w[t]=w[t]||[];
+    ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"];
+    ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};
+    for(var i=0;i<ttq.methods.length;i++){ttq.setAndDefer(ttq,ttq.methods[i]);}
+    ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++){ttq.setAndDefer(e,ttq.methods[n]);}return e;};
+    ttq.load=function(e,n){
+      var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;
+      ttq._i=ttq._i||{};
+      ttq._i[e]=[];
+      ttq._i[e]._u=r;
+      ttq._t=ttq._t||{};
+      ttq._t[e]=+new Date;
+      ttq._o=ttq._o||{};
+      ttq._o[e]=n||{};
+      n=document.createElement("script");
+      n.type="text/javascript";
+      n.async=!0;
+      n.src=r+"?sdkid="+e+"&lib="+t;
+      e=document.getElementsByTagName("script")[0];
+      e.parentNode.insertBefore(n,e);
+    };
+    ttq.load('D62CCDBC77UC1EV4AO9G');
+    ttq.page();
+  }(window, document, 'ttq');
+  </script>
+  <!-- TikTok Pixel Code End -->
+
 </head>
 
 <body>
