@@ -1,167 +1,149 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="tr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Invitation artistique</title>
+  <title>Sanatsal Bir Davet</title>
 
   <style>
+    :root {
+      --primary-accent: #C5A059; /* 经典的土耳其式金棕色 */
+      --deep-text: #1a1a1a;
+      --bg-gradient: linear-gradient(180deg, #fcfaf7 0%, #f2ede4 100%);
+    }
+
     body {
       margin: 0;
-      font-family: "Georgia", "Times New Roman", serif;
-      background: linear-gradient(180deg, #f9f7f4, #efeae2);
-      color: #2a2a2a;
+      font-family: "Playfair Display", "Georgia", serif; /* 土耳其语在衬线体下非常有档次 */
+      background: var(--bg-gradient);
+      color: var(--deep-text);
+      -webkit-font-smoothing: antialiased;
     }
 
     .container {
-      max-width: 720px;
+      max-width: 600px; /* 缩小宽度，在移动端更紧凑专业 */
       margin: 0 auto;
-      padding: 48px 22px 70px;
+      padding: 60px 24px 80px;
       text-align: center;
     }
 
     h1 {
-      font-size: 34px;
-      font-weight: 400;
-      letter-spacing: 0.5px;
-      margin-bottom: 18px;
+      font-size: 38px;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+      margin-bottom: 12px;
+      color: #3e2723;
     }
 
     .subtitle {
-      font-size: 17px;
-      color: #555;
-      margin-bottom: 36px;
+      font-size: 19px;
+      color: var(--primary-accent);
+      margin-bottom: 40px;
+      font-style: italic;
+      font-family: "Montserrat", sans-serif;
     }
 
     .image-box {
-      margin: 40px 0;
-      border-radius: 18px;
+      margin: 30px 0;
+      border-radius: 24px;
       overflow: hidden;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+      box-shadow: 0 20px 40px rgba(62, 39, 35, 0.15);
+      transition: transform 0.3s ease;
+    }
+
+    .image-box:hover {
+      transform: scale(1.02);
     }
 
     .image-box img {
       width: 100%;
+      height: auto;
       display: block;
     }
 
     .text {
-      font-size: 18px;
+      font-size: 20px;
       line-height: 1.8;
-      color: #3f3f3f;
-      margin: 28px 0;
+      color: #4e342e;
+      margin: 35px 0;
     }
 
     .text em {
       font-style: italic;
-      color: #1f1f1f;
+      color: var(--primary-accent);
+      font-weight: 500;
     }
 
     .cta {
-      margin-top: 48px;
+      margin-top: 50px;
     }
 
     .cta a {
       display: inline-block;
-      padding: 16px 36px;
-      background: #1c1c1c;
+      padding: 18px 50px;
+      background: #3e2723; /* 深浓咖啡色按钮 */
       color: #ffffff;
       text-decoration: none;
-      font-size: 17px;
-      border-radius: 40px;
-      letter-spacing: 0.4px;
-      transition: all 0.3s ease;
+      font-size: 18px;
+      font-weight: 600;
+      border-radius: 50px;
+      box-shadow: 0 10px 25px rgba(62, 39, 35, 0.3);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .cta a:hover {
-      background: #000;
-      transform: translateY(-1px);
+      background: var(--primary-accent);
+      transform: translateY(-3px);
+      box-shadow: 0 15px 30px rgba(197, 160, 89, 0.4);
     }
 
     .note {
-      margin-top: 22px;
-      font-size: 14px;
-      color: #777;
-      font-style: italic;
+      margin-top: 30px;
+      font-size: 15px;
+      color: #8d6e63;
+      letter-spacing: 0.5px;
+    }
+
+    /* 装饰元素 */
+    .divider {
+      width: 50px;
+      height: 2px;
+      background: var(--primary-accent);
+      margin: 30px auto;
     }
   </style>
-
-  <!-- TikTok Pixel Code Start -->
-  <script>
-  !function (w, d, t) {
-    w.TiktokAnalyticsObject=t;
-    var ttq=w[t]=w[t]||[];
-    ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"];
-    ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};
-    for(var i=0;i<ttq.methods.length;i++){ttq.setAndDefer(ttq,ttq.methods[i]);}
-    ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++){ttq.setAndDefer(e,ttq.methods[n]);}return e;};
-    ttq.load=function(e,n){
-      var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;
-      ttq._i=ttq._i||{};
-      ttq._i[e]=[];
-      ttq._i[e]._u=r;
-      ttq._t=ttq._t||{};
-      ttq._t[e]=+new Date;
-      ttq._o=ttq._o||{};
-      ttq._o[e]=n||{};
-      n=document.createElement("script");
-      n.type="text/javascript";
-      n.async=!0;
-      n.src=r+"?sdkid="+e+"&lib="+t;
-      e=document.getElementsByTagName("script")[0];
-      e.parentNode.insertBefore(n,e);
-    };
-
-    // 加载两个像素
-    ttq.load('D61OF6JC77U10VTVVQ8G');
-    ttq.load('D629JURC77U6LCNG3EKG');
-    ttq.page();
-  }(window, document, 'ttq');
-
-  // 点击 WS 时触发两个 Pixel 事件
-  function trackDualConversion() {
-    try {
-      ttq.instance('D61OF6JC77U10VTVVQ8G').track('Contact');
-      ttq.instance('D629JURC77U6LCNG3EKG').track('Contact');
-    } catch(e){
-      console.warn('TikTok Pixel tracking failed', e);
-    }
-  }
-  </script>
-  <!-- TikTok Pixel Code End -->
-
 </head>
 
 <body>
   <div class="container">
 
-    <h1>Une invitation artistique</h1>
+    <h1>Sanatsal Bir Davet</h1>
 
     <div class="subtitle">
-      Un moment calme, autour de l’art
+      Sanatın huzurunda sakin bir an
     </div>
 
     <div class="image-box">
-      <img src="https://your-image-url.com/art.jpg" alt="Art et exposition">
+      <img src="https://images.unsplash.com/photo-1511018556341-d16986a1c194?auto=format&fit=crop&w=800&q=80" alt="Sanat ve Kahve">
     </div>
 
     <div class="text">
-      Regarder une œuvre,<br>
-      laisser venir une émotion,<br>
-      prendre le temps.
-      <br><br>
-      Cette invitation est simplement une porte ouverte  
-      vers un <em>moment artistique, libre et sans attente</em>.
+      Bir esere bakmak,<br>
+      duyguların akışına izin vermek,<br>
+      zamanı durdurmak.
+      <br>
+      <div class="divider"></div>
+      Bu davet, sadece <em>özgür, sanatsal ve beklentisiz bir ana</em> açılan açık bir kapıdır.
     </div>
 
     <div class="cta">
-      <a href="https://wa.me/17655566144/?text=Bonjour" target="_blank" onclick="trackDualConversion()">
-        Accepter l’invitation
+      <a href="https://wa.me/17655566144/?text=Merhaba" target="_blank">
+        Daveti Kabul Et
       </a>
     </div>
 
     <div class="note">
-      Invitation gratuite · Sans engagement · Juste l’art
+      Ücretsiz Davet · Taahhüt Yok · Sadece Sanat
     </div>
 
   </div>
