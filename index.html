@@ -86,26 +86,55 @@
     }
   </style>
 
+  <!-- TikTok Pixel Code Start -->
   <script>
   !function (w, d, t) {
-    w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
-    var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
-    ;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+    w.TiktokAnalyticsObject=t;
+    var ttq=w[t]=w[t]||[];
+    ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"];
+    ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};
+    for(var i=0;i<ttq.methods.length;i++){ttq.setAndDefer(ttq,ttq.methods[i]);}
+    ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++){ttq.setAndDefer(e,ttq.methods[n]);}return e;};
+    ttq.load=function(e,n){
+      var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;
+      ttq._i=ttq._i||{};
+      ttq._i[e]=[];
+      ttq._i[e]._u=r;
+      ttq._t=ttq._t||{};
+      ttq._t[e]=+new Date;
+      ttq._o=ttq._o||{};
+      ttq._o[e]=n||{};
+      n=document.createElement("script");
+      n.type="text/javascript";
+      n.async=!0;
+      n.src=r+"?sdkid="+e+"&lib="+t;
+      e=document.getElementsByTagName("script")[0];
+      e.parentNode.insertBefore(n,e);
+    };
 
-    // 同时加载两个像素 ID
+    // 加载两个像素
     ttq.load('D61OF6JC77U10VTVVQ8G');
     ttq.load('D629JURC77U6LCNG3EKG');
-    
     ttq.page();
   }(window, document, 'ttq');
 
-  // 定义双重追踪函数
-  function trackDualConversion() {
+  // 双重事件追踪 + 延迟跳转 WhatsApp
+  function trackDualConversion(e) {
+    e.preventDefault(); // 阻止立即跳转
+
+    // 触发两个像素事件
     ttq.instance('D61OF6JC77U10VTVVQ8G').track('Contact');
     ttq.instance('D629JURC77U6LCNG3EKG').track('Contact');
+
+    // 延迟跳转，确保事件发送成功
+    setTimeout(function() {
+      window.open(e.currentTarget.href, '_blank');
+    }, 300); // 300ms 通常足够
   }
   </script>
-  </head>
+  <!-- TikTok Pixel Code End -->
+
+</head>
 
 <body>
   <div class="container">
@@ -130,7 +159,7 @@
     </div>
 
     <div class="cta">
-      <a href="https://wa.me/17655566144/?text=Bonjour" target="_blank" onclick="trackDualConversion()">
+      <a href="https://wa.me/17655566144/?text=Bonjour" target="_blank" onclick="trackDualConversion(event)">
         Accepter l’invitation
       </a>
     </div>
