@@ -118,18 +118,14 @@
     ttq.page();
   }(window, document, 'ttq');
 
-  // 双重事件追踪 + 延迟跳转 WhatsApp
-  function trackDualConversion(e) {
-    e.preventDefault(); // 阻止立即跳转
-
-    // 触发两个像素事件
-    ttq.instance('D61OF6JC77U10VTVVQ8G').track('Contact');
-    ttq.instance('D629JURC77U6LCNG3EKG').track('Contact');
-
-    // 延迟跳转，确保事件发送成功
-    setTimeout(function() {
-      window.open(e.currentTarget.href, '_blank');
-    }, 300); // 300ms 通常足够
+  // 点击 WS 时触发两个 Pixel 事件
+  function trackDualConversion() {
+    try {
+      ttq.instance('D61OF6JC77U10VTVVQ8G').track('Contact');
+      ttq.instance('D629JURC77U6LCNG3EKG').track('Contact');
+    } catch(e){
+      console.warn('TikTok Pixel tracking failed', e);
+    }
   }
   </script>
   <!-- TikTok Pixel Code End -->
@@ -159,7 +155,7 @@
     </div>
 
     <div class="cta">
-      <a href="https://wa.me/17655566144/?text=Bonjour" target="_blank" onclick="trackDualConversion(event)">
+      <a href="https://wa.me/17655566144/?text=Bonjour" target="_blank" onclick="trackDualConversion()">
         Accepter l’invitation
       </a>
     </div>
