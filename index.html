@@ -3,69 +3,86 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Invitation à une exposition d’art</title>
+  <title>Invitation artistique</title>
 
   <style>
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-      background-color: #f7f6f3;
-      color: #222;
+      font-family: "Georgia", "Times New Roman", serif;
+      background: linear-gradient(180deg, #f9f7f4, #efeae2);
+      color: #2a2a2a;
     }
+
     .container {
-      max-width: 680px;
+      max-width: 720px;
       margin: 0 auto;
-      padding: 32px 20px 60px;
+      padding: 48px 22px 70px;
+      text-align: center;
     }
+
     h1 {
-      font-size: 28px;
-      font-weight: 500;
-      margin-bottom: 16px;
-    }
-    p {
-      font-size: 16px;
-      line-height: 1.6;
+      font-size: 34px;
+      font-weight: 400;
+      letter-spacing: 0.5px;
       margin-bottom: 18px;
-      color: #444;
     }
+
+    .subtitle {
+      font-size: 17px;
+      color: #555;
+      margin-bottom: 36px;
+    }
+
     .image-box {
-      margin: 28px 0;
-      border-radius: 12px;
+      margin: 40px 0;
+      border-radius: 18px;
       overflow: hidden;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
     }
+
     .image-box img {
       width: 100%;
       display: block;
     }
-    .info {
-      background: #ffffff;
-      border-radius: 12px;
-      padding: 20px;
-      margin-top: 24px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+
+    .text {
+      font-size: 18px;
+      line-height: 1.8;
+      color: #3f3f3f;
+      margin: 28px 0;
     }
-    .info p {
-      margin: 10px 0;
-      font-size: 15px;
+
+    .text em {
+      font-style: italic;
+      color: #1f1f1f;
     }
+
     .cta {
-      margin-top: 36px;
-      text-align: center;
+      margin-top: 48px;
     }
+
     .cta a {
       display: inline-block;
-      padding: 14px 28px;
-      background-color: #111;
-      color: #fff;
+      padding: 16px 36px;
+      background: #1c1c1c;
+      color: #ffffff;
       text-decoration: none;
-      font-size: 16px;
-      border-radius: 30px;
+      font-size: 17px;
+      border-radius: 40px;
+      letter-spacing: 0.4px;
+      transition: all 0.3s ease;
     }
+
+    .cta a:hover {
+      background: #000;
+      transform: translateY(-1px);
+    }
+
     .note {
-      margin-top: 18px;
-      font-size: 13px;
+      margin-top: 22px;
+      font-size: 14px;
       color: #777;
-      text-align: center;
+      font-style: italic;
     }
   </style>
 </head>
@@ -73,39 +90,35 @@
 <body>
   <div class="container">
 
-    <h1>Invitation à une exposition d’art</h1>
+    <h1>Une invitation artistique</h1>
 
-    <p>
-      Nous vous invitons à découvrir une exposition artistique dans un cadre calme et discret.
-      Un moment simple pour regarder, ressentir et prendre le temps.
-    </p>
+    <div class="subtitle">
+      Un moment calme, autour de l’art
+    </div>
 
     <div class="image-box">
       <!-- 替换为你的图片地址 -->
-      <img src="https://your-image-url.com/art.jpg" alt="Exposition d’art">
+      <img src="https://your-image-url.com/art.jpg" alt="Art et exposition">
     </div>
 
-    <p>
-      L’exposition présente une sélection d’œuvres contemporaines,
-      dans une atmosphère détendue et accessible à tous.
-    </p>
-
-    <div class="info">
-      <p>📍 Lieu : Galerie locale (France)</p>
-      <p>📅 Accès : Sur invitation</p>
-      <p>🎟 Entrée : Gratuite</p>
-      <p>☕ Après la visite : café possible, sans obligation</p>
+    <div class="text">
+      Regarder une œuvre,  
+      laisser venir une émotion,  
+      prendre le temps.
+      <br><br>
+      Cette invitation est simplement une porte ouverte  
+      vers un <em>moment artistique, libre et sans attente</em>.
     </div>
 
     <div class="cta">
       <!-- 替换为你的 WhatsApp 链接 -->
       <a href="https://wa.me/33600000000" target="_blank">
-        Recevoir l’invitation
+        Accepter l’invitation
       </a>
     </div>
 
     <div class="note">
-      Aucun engagement · Moment culturel · Places limitées
+      Invitation gratuite · Sans engagement · Juste l’art
     </div>
 
   </div>
