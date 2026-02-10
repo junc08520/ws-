@@ -1,103 +1,143 @@
 <!DOCTYPE html>
-<html lang="kk">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Кофе кездесуіне шақыру</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Espacio Musical</title>
 
-    <!-- TikTok Pixel Code Start -->
-    <script>
-    !function (w, d, t) {
-      w.TiktokAnalyticsObject=t;
-      var ttq=w[t]=w[t]||[];
-      ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"];
-      ttq.setAndDefer=function(t,e){
-        t[e]=function(){
-          t.push([e].concat(Array.prototype.slice.call(arguments,0)))
-        }
-      };
-      for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);
-      ttq.instance=function(t){
-        for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)
-          ttq.setAndDefer(e,ttq.methods[n]);
-        return e
-      };
-      ttq.load=function(e,n){
-        var r="https://analytics.tiktok.com/i18n/pixel/events.js";
-        ttq._i=ttq._i||{};
-        ttq._i[e]=[];
-        ttq._i[e]._u=r;
-        ttq._t=ttq._t||{};
-        ttq._t[e]=+new Date;
-        ttq._o=ttq._o||{};
-        ttq._o[e]=n||{};
-        n=document.createElement("script");
-        n.type="text/javascript";
-        n.async=!0;
-        n.src=r+"?sdkid="+e+"&lib="+t;
-        e=document.getElementsByTagName("script")[0];
-        e.parentNode.insertBefore(n,e)
-      };
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-      ttq.load('D64956JC77UBD797D0H0');
-      ttq.page();
-    }(window, document, 'ttq');
-    </script>
-    <!-- TikTok Pixel Code End -->
+<!-- ================= Meta Pixel Code ================= -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
 
-    <style>
-        body {
-            margin: 0;
-            font-family: "Georgia", serif;
-            background: #fefcf7;
-            color: #2a2a2a;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            text-align: center;
-        }
+fbq('init', '928691999846673');
+fbq('track', 'PageView');
+</script>
 
-        h1 {
-            font-size: 32px;
-            margin-bottom: 15px;
-        }
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=928691999846673&ev=PageView&noscript=1"/>
+</noscript>
+<!-- ================= End Meta Pixel ================= -->
 
-        p {
-            font-size: 18px;
-            margin-bottom: 40px;
-        }
 
-        .cta a {
-            display: inline-block;
-            padding: 18px 45px;
-            background: #4A2C19;
-            color: #fff;
-            font-size: 18px;
-            font-weight: 600;
-            border-radius: 35px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
+<!-- ================= TikTok Pixel ================= -->
+<script>
+!function (w, d, t) {
+  w.TiktokAnalyticsObject = t;
+  var ttq = w[t] = w[t] || [];
+  ttq.methods = ["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"];
+  ttq.setAndDefer = function(t, e) {
+    t[e] = function() {
+      t.push([e].concat(Array.prototype.slice.call(arguments, 0)))
+    }
+  };
+  for (var i = 0; i < ttq.methods.length; i++) {
+    ttq.setAndDefer(ttq, ttq.methods[i]);
+  }
 
-        .cta a:hover {
-            background: #C58A4B;
-            transform: translateY(-2px);
-        }
-    </style>
+  ttq.load = function(e) {
+    var n = document.createElement("script");
+    n.async = true;
+    n.src = "https://analytics.tiktok.com/i18n/pixel/events.js?sdkid=" + e + "&lib=ttq";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(n, s);
+  };
+
+  ttq.load('D6500FBC77U25FF4E440');
+  ttq.page();
+}(window, document, 'ttq');
+</script>
+<!-- ================= End TikTok Pixel ================= -->
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg,#667eea,#764ba2);
+  color:#fff;
+  text-align:center;
+  padding:80px 20px;
+}
+.ws-button {
+  display:inline-flex;
+  gap:10px;
+  align-items:center;
+  padding:22px 48px;
+  border-radius:60px;
+  background:#25D366;
+  color:#fff;
+  font-size:1.3rem;
+  font-weight:700;
+  text-decoration:none;
+}
+</style>
 </head>
 
 <body>
 
-    <h1>Кофе кездесуіне шақыру</h1>
-    <p>Демалыс уақыты, дәмді кофе және жайлы әңгіме.</p>
+<h1>Música, Conexión & Buen Ambiente</h1>
+<p>Conecta, disfruta y participa fácilmente</p>
 
-    <div class="cta">
-        <a href="https://wa.me/+16398546418?text=hello" target="_blank">
-            Қатысуға тіркелу
-        </a>
-    </div>
+<a href="#" class="ws-button" onclick="goWhatsApp(event)">
+  <i class="fab fa-whatsapp"></i> PARTICIPAR POR WHATSAPP
+</a>
+
+<script>
+// 页面加载事件
+window.addEventListener('load', function () {
+
+  // TikTok ViewContent
+  if (window.ttq) {
+    ttq.track('ViewContent', {
+      content_name: 'Espacio Musical Landing'
+    });
+  }
+
+  // Meta ViewContent（可选，质量更高）
+  if (window.fbq) {
+    fbq('track', 'ViewContent', {
+      content_name: 'Espacio Musical Landing'
+    });
+  }
+});
+
+// WhatsApp 点击事件
+function goWhatsApp(e) {
+  e.preventDefault();
+
+  // TikTok 事件
+  if (window.ttq) {
+    ttq.track('Contact', {
+      content_name: 'WhatsApp Button'
+    });
+
+    ttq.track('Lead', {
+      content_name: 'WhatsApp Lead'
+    });
+  }
+
+  // Meta 事件
+  if (window.fbq) {
+    fbq('track', 'Contact');
+    fbq('track', 'Lead');
+  }
+
+  setTimeout(function () {
+    window.open(
+      'https://wa.me/12678341019?text=Hola.%20quiero%20participar',
+      '_blank'
+    );
+  }, 700);
+}
+</script>
 
 </body>
 </html>
