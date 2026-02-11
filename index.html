@@ -3,58 +3,69 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Invitación Especial</title>
+<title>Fiesta Exclusiva</title>
 
 <style>
 body{
     margin:0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(135deg,#ff416c,#ff4b2b);
+    font-family: 'Segoe UI', sans-serif;
+    height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
-    height:100vh;
     text-align:center;
-    color:#ffffff;
+    color:white;
+    background: radial-gradient(circle at 20% 20%, #ff00cc, transparent 40%),
+                radial-gradient(circle at 80% 30%, #3333ff, transparent 40%),
+                radial-gradient(circle at 50% 80%, #ff6600, transparent 40%),
+                linear-gradient(135deg,#1a0026,#000814);
+    background-blend-mode: screen;
+    overflow:hidden;
 }
 
 .container{
-    max-width:500px;
-    padding:30px;
+    max-width:550px;
+    padding:40px;
+    background: rgba(0,0,0,0.55);
+    backdrop-filter: blur(10px);
+    border-radius:25px;
+    box-shadow:0 20px 60px rgba(0,0,0,0.6);
 }
 
 h1{
-    font-size:32px;
+    font-size:36px;
     margin-bottom:15px;
+    letter-spacing:1px;
 }
 
 p{
     font-size:18px;
-    margin-bottom:40px;
-    line-height:1.6;
+    line-height:1.7;
+    margin-bottom:35px;
 }
 
 .btn{
     display:inline-block;
-    padding:18px 40px;
-    background:#ffffff;
-    color:#ff416c;
+    padding:18px 45px;
+    background: linear-gradient(90deg,#ff00cc,#ff6600);
+    color:white;
     font-size:18px;
     font-weight:bold;
     border-radius:40px;
     text-decoration:none;
     transition:0.3s ease;
+    box-shadow:0 10px 30px rgba(255,0,120,0.5);
 }
 
 .btn:hover{
-    background:#ffe6ea;
-    transform:translateY(-3px);
+    transform:translateY(-4px);
+    box-shadow:0 15px 40px rgba(255,0,120,0.7);
 }
 
 .small{
     margin-top:20px;
     font-size:14px;
-    opacity:0.9;
+    opacity:0.85;
 }
 </style>
 </head>
@@ -62,19 +73,19 @@ p{
 <body>
 
 <div class="container">
-    <h1>¡Estás Invitado!</h1>
-    
+    <h1>¡Gran Fiesta Privada!</h1>
+
     <p>
-        Una experiencia diferente, música, buena energía y nuevas conexiones.  
-        Únete a nuestra comunidad y descubre más detalles.
+        Música vibrante, ambiente increíble y una noche llena de buena energía.  
+        Vive algo diferente y conecta con personas que también quieren disfrutar.
     </p>
 
-    <a class="btn" href="https://wa.me/YourNumberHere?text=Hola%20quiero%20más%20información" target="_blank">
-        Unirme a la Comunidad
+    <a class="btn" href="https://wa.me/YourNumberHere?text=Hola%20quiero%20unirme%20a%20la%20fiesta" target="_blank">
+        Unirme y conocer más
     </a>
 
     <div class="small">
-        Evento gratuito · Cupo limitado
+        Evento gratuito · Acceso por invitación
     </div>
 </div>
 
