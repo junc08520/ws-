@@ -3,141 +3,80 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Espacio Musical</title>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-<!-- ================= Meta Pixel Code ================= -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-
-fbq('init', '928691999846673');
-fbq('track', 'PageView');
-</script>
-
-<noscript>
-<img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=928691999846673&ev=PageView&noscript=1"/>
-</noscript>
-<!-- ================= End Meta Pixel ================= -->
-
-
-<!-- ================= TikTok Pixel ================= -->
-<script>
-!function (w, d, t) {
-  w.TiktokAnalyticsObject = t;
-  var ttq = w[t] = w[t] || [];
-  ttq.methods = ["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"];
-  ttq.setAndDefer = function(t, e) {
-    t[e] = function() {
-      t.push([e].concat(Array.prototype.slice.call(arguments, 0)))
-    }
-  };
-  for (var i = 0; i < ttq.methods.length; i++) {
-    ttq.setAndDefer(ttq, ttq.methods[i]);
-  }
-
-  ttq.load = function(e) {
-    var n = document.createElement("script");
-    n.async = true;
-    n.src = "https://analytics.tiktok.com/i18n/pixel/events.js?sdkid=" + e + "&lib=ttq";
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(n, s);
-  };
-
-  ttq.load('D6500FBC77U25FF4E440');
-  ttq.page();
-}(window, document, 'ttq');
-</script>
-<!-- ================= End TikTok Pixel ================= -->
+<title>Invitación Especial</title>
 
 <style>
-body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(135deg,#667eea,#764ba2);
-  color:#fff;
-  text-align:center;
-  padding:80px 20px;
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg,#ff416c,#ff4b2b);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    text-align:center;
+    color:#ffffff;
 }
-.ws-button {
-  display:inline-flex;
-  gap:10px;
-  align-items:center;
-  padding:22px 48px;
-  border-radius:60px;
-  background:#25D366;
-  color:#fff;
-  font-size:1.3rem;
-  font-weight:700;
-  text-decoration:none;
+
+.container{
+    max-width:500px;
+    padding:30px;
+}
+
+h1{
+    font-size:32px;
+    margin-bottom:15px;
+}
+
+p{
+    font-size:18px;
+    margin-bottom:40px;
+    line-height:1.6;
+}
+
+.btn{
+    display:inline-block;
+    padding:18px 40px;
+    background:#ffffff;
+    color:#ff416c;
+    font-size:18px;
+    font-weight:bold;
+    border-radius:40px;
+    text-decoration:none;
+    transition:0.3s ease;
+}
+
+.btn:hover{
+    background:#ffe6ea;
+    transform:translateY(-3px);
+}
+
+.small{
+    margin-top:20px;
+    font-size:14px;
+    opacity:0.9;
 }
 </style>
 </head>
 
 <body>
 
-<h1>Música, Conexión & Buen Ambiente</h1>
-<p>Conecta, disfruta y participa fácilmente</p>
+<div class="container">
+    <h1>¡Estás Invitado!</h1>
+    
+    <p>
+        Una experiencia diferente, música, buena energía y nuevas conexiones.  
+        Únete a nuestra comunidad y descubre más detalles.
+    </p>
 
-<a href="#" class="ws-button" onclick="goWhatsApp(event)">
-  <i class="fab fa-whatsapp"></i> PARTICIPAR POR WHATSAPP
-</a>
+    <a class="btn" href="https://wa.me/YourNumberHere?text=Hola%20quiero%20más%20información" target="_blank">
+        Unirme a la Comunidad
+    </a>
 
-<script>
-// 页面加载事件
-window.addEventListener('load', function () {
-
-  // TikTok ViewContent
-  if (window.ttq) {
-    ttq.track('ViewContent', {
-      content_name: 'Espacio Musical Landing'
-    });
-  }
-
-  // Meta ViewContent（可选，质量更高）
-  if (window.fbq) {
-    fbq('track', 'ViewContent', {
-      content_name: 'Espacio Musical Landing'
-    });
-  }
-});
-
-// WhatsApp 点击事件
-function goWhatsApp(e) {
-  e.preventDefault();
-
-  // TikTok 事件
-  if (window.ttq) {
-    ttq.track('Contact', {
-      content_name: 'WhatsApp Button'
-    });
-
-    ttq.track('Lead', {
-      content_name: 'WhatsApp Lead'
-    });
-  }
-
-  // Meta 事件
-  if (window.fbq) {
-    fbq('track', 'Contact');
-    fbq('track', 'Lead');
-  }
-
-  setTimeout(function () {
-    window.open(
-      'https://wa.me/12678341019?text=Hola.%20quiero%20participar',
-      '_blank'
-    );
-  }, 700);
-}
-</script>
+    <div class="small">
+        Evento gratuito · Cupo limitado
+    </div>
+</div>
 
 </body>
 </html>
